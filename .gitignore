@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Node (voor het geval je later live-server/tooling toevoegt)
+node_modules/

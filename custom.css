@@ -1,0 +1,188 @@
+/* ===================================================================
+   Arcady huisstijl — afgeleid uit "Arcady PPT klanten Momentum.pptx"
+   Kernprincipes uit de PPT:
+   - donkere achtergrond, links uitgelijnd
+   - grote bold koppen, GEEN onderstreep-balkjes
+   - kleine groene "eyebrow" boven de titel
+   - groene keyword-accenten in witte tekst
+   - een reuzen "ghost"-woord op scheidingsslides
+   =================================================================== */
+:root {
+  --arcady-green: #00A667;
+  --arcady-green-soft: #37C08A;
+  --arcady-dark: #1a1a1a;
+  --arcady-ghost: #2b2b2b;   /* laag-contrast reuzenwoord */
+  --arcady-body: #e9e9e9;
+  --arcady-grey: #9a9a9a;
+}
+
+.reveal { font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #fff; font-size: 25px; }
+.reveal-viewport { background: #000; }
+
+/* Houd ALLES binnen een vast 16:9-frame — ook de achtergronden (ijsbeer,
+   starry night) en de reveal-UI (voortgangsbalk, slidenummer). Reveal rendert
+   die normaal full-viewport; hier berekenen we het gecentreerde 16:9-vlak en
+   dwingen alles daarheen. Op ultrawide komen zo zwarte balken links/rechts. */
+.reveal {
+  --frame-w: min(100vw, calc(100vh * 16 / 9));
+  --frame-h: min(100vh, calc(100vw * 9 / 16));
+  --frame-x: calc((100vw - var(--frame-w)) / 2);   /* balk-breedte links/rechts */
+  --frame-y: calc((100vh - var(--frame-h)) / 2);   /* balk-hoogte boven/onder */
+}
+.reveal .backgrounds {
+  width: var(--frame-w);
+  height: var(--frame-h);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+/* Links uitgelijnd, met een vaste linkermarge zoals in de PPT --------- */
+.reveal .slides { text-align: left; }
+.reveal .slides > section,
+.reveal .slides > section > section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 7% 0 9%;
+  left: 0 !important;          /* reveal's horizontale centrering uitschakelen */
+}
+
+/* --- Koppen --------------------------------------------------------- */
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.02;
+  color: #fff;
+}
+.reveal h1 { font-size: 126px; }
+.reveal h2 { font-size: 80px; margin: 0 0 .4em; }
+.reveal h3 { font-size: 40px; font-weight: 700; color: var(--arcady-green-soft); letter-spacing: -.5px; }
+
+/* Kleine groene eyebrow boven de titel (het Arcady-kicker-label) ------ */
+.reveal .eyebrow {
+  color: var(--arcady-green);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  margin: 0 0 .6em;
+}
+
+/* Keyword-accent: **vet** wordt groen (zoals "succes" op de cover) ---- */
+.reveal strong { color: var(--arcady-green); font-weight: 800; }
+.reveal em { color: var(--arcady-green-soft); font-style: normal; }
+
+/* Subtitel-paragraaf direct onder een kop */
+.reveal h2 + p { color: var(--arcady-grey); font-size: 30px; margin-top: -.2em; }
+
+/* --- Lijsten -------------------------------------------------------- */
+.reveal ul, .reveal ol { display: block; margin: .3em 0 0; padding-left: 0; }
+.reveal ul { list-style: none; }
+.reveal ul li {
+  position: relative; padding-left: 1.1em; margin: .5em 0;
+  color: var(--arcady-body);
+}
+.reveal ul li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: .55em; height: .16em; background: var(--arcady-green);
+}
+.reveal ol { margin: .3em 0 0 1.2em; }
+.reveal ol li { margin: .5em 0; color: var(--arcady-body); }
+.reveal ol li::marker { color: var(--arcady-green); font-weight: 800; }
+
+/* --- Code ----------------------------------------------------------- */
+.reveal pre { box-shadow: none; width: 100%; margin: .6em 0 0; }
+.reveal pre code {
+  max-height: 58vh; border-left: 4px solid var(--arcady-green);
+  border-radius: 4px; background: #111; padding: 1em 1.2em; font-size: 22px;
+}
+
+/* --- Titel / scheidingsslides (space-achtergrond) ------------------- */
+.reveal section.divider,
+.reveal section.cover { }
+.reveal section.cover { text-align: center; }
+.reveal section.cover h1,
+.reveal section.divider h2 { text-shadow: 0 2px 18px rgba(0,0,0,.65); }
+.reveal section.cover p { font-size: 44px; color: #dcdcdc; }
+
+/* Scheidingsslides = ijsbeer-template: grote titel links, ijsbeer rechts.
+   Tekst links begrenzen zodat die niet over de ijsbeer valt. */
+.reveal section.divider h2 { font-size: 140px; max-width: 88%; }
+.reveal section.divider .eyebrow { font-size: 32px; }
+/* Agenda/tekst links begrenzen zodat die niet over de ijsbeer valt */
+.reveal section.divider .eyebrow,
+.reveal section.divider h3,
+.reveal section.divider p,
+.reveal section.divider ul,
+.reveal section.divider ol { max-width: 50%; }
+.reveal section.divider li { margin: .32em 0; font-size: 30px; }
+
+/* --- "Wie ben ik" — fotomozaïek (zoals "Even voorstellen" in de PPT) - */
+.reveal .voorstellen { display: flex; flex-direction: column; gap: 14px; }
+.reveal .voorstellen .vzt-head { flex: 0 0 auto; }
+.reveal .voorstellen h2 { font-size: 140px; margin: 0 0 .1em; }
+.reveal .voorstellen .lead { color: var(--arcady-body); font-size: 30px; max-width: 70%; margin: 0; }
+.reveal .voorstellen .collage {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-rows: 330px 330px;   /* vaste hoogte i.p.v. vh (reveal schaalt de stage) */
+  gap: 14px;
+}
+.reveal .voorstellen .collage img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 6px; margin: 0; box-shadow: none;
+  border: 1px solid rgba(255,255,255,.06);
+}
+.reveal .voorstellen .collage .p1 { grid-column: 1; grid-row: 1 / span 2; }
+.reveal .voorstellen .collage .p2 { grid-column: 2; grid-row: 1; }
+.reveal .voorstellen .collage .p3 { grid-column: 3; grid-row: 1; }
+.reveal .voorstellen .collage .p4 { grid-column: 2 / span 2; grid-row: 2; }
+
+/* --- Token-voor-token opbouw (LLM-slide) --------------------------- */
+.reveal .tokengen { margin-top: 2em; }
+.reveal .tokengen p { margin: .12em 0; }
+
+/* Generiek: afbeelding rechts naast de tekst -----------------------
+   Gebruik: zet ALLEEN class="slide-figure" op de <img>. De slide detecteert
+   dat zelf (via :has) en beperkt de tekst automatisch tot de linkerhelft.
+   Optioneel bredere/smallere afbeelding: <!-- .slide: style="--fig-w:46%" --> */
+/* :has(> …) = alléén de directe ouder-sectie (niet de buitenste stack-sectie,
+   anders krijgt de binnenste sectie zélf de max-width en klapt alles in). */
+.reveal .slides section:has(> .slide-figure) { --fig-w: 39%; }
+.reveal .slides section:has(> .slide-figure) > *:not(.slide-figure) {
+  max-width: calc(94% - var(--fig-w));
+}
+.reveal .slides section .slide-figure {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--fig-w, 39%);
+  height: auto;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+}
+
+/* --- Vaste Arcady-logo's in de hoeken ------------------------------- */
+/* Binnen het slide-frame (1920x1080), dus ze schalen mee en blijven
+   altijd in de 16:9-verhouding — ook op ultrawide schermen. */
+.reveal .slides .brand-logo { position: absolute; top: 0; left: 30px; height: 80px; z-index: 40; pointer-events: none; }
+.reveal .slides .brand-mark { position: absolute; bottom: 10px; right: 20px; height: 40px; opacity: .85; z-index: 40; pointer-events: none; }
+
+/* --- Slidenummer & voortgangsbalk in brandstijl -------------------- */
+/* Slidenummer & voortgangsbalk binnen het 16:9-frame (niet in de zwarte balk) */
+.reveal .slide-number {
+  background: transparent; color: var(--arcady-grey);
+  right: auto; left: calc(var(--frame-x) + 14px); bottom: calc(var(--frame-y) + 10px);
+}
+.reveal .progress {
+  color: var(--arcady-green); height: 4px;
+  width: var(--frame-w); left: var(--frame-x); bottom: var(--frame-y);
+}
+.reveal .progress span { background: var(--arcady-green); }

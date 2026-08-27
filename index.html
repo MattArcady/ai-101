@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Training</title>
+
+  <!-- Montserrat (huisstijl-lettertype) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/black.css" id="theme">
+  <!-- Syntax highlighting voor code-blokken -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Arcady-logo's binnen het 16:9-frame (schalen mee, blijven in verhouding) -->
+      <img class="brand-logo" src="assets/arcady-logo.png" alt="Arcady">
+      <img class="brand-mark" src="assets/arcady-mark.png" alt="">
+
+      <!-- Titel (staat direct hier) -->
+      <section class="cover"
+               data-background-image="assets/bg-space.jpg"
+               data-background-size="cover"
+               data-background-color="#141414">
+        <h1>AI Training</h1>
+        <p>Van "wat is een LLM?" naar zelf features <strong>bouwen</strong></p>
+        <aside class="notes">
+          Welkom. Vandaag gaan we van de basis naar zelf aan de slag.
+          Druk op S voor de speaker view. Twee workshops aan het eind:
+          eerst prompten, dan echt een feature bouwen.
+        </aside>
+      </section>
+
+      <!--
+        Elk hoofdstuk komt uit een los .md-bestand in slides/.
+        Binnen een bestand splitst "---" op een eigen regel de sub-slides
+        (verticale stack). Speakernotes beginnen met "Note:".
+        Let op: dit werkt alleen via een lokale server (fetch), niet op file://.
+      -->
+      <section
+        data-markdown="slides/01-intro.md"
+        data-separator="\r?\n===\r?\n"
+        data-separator-vertical="\r?\n---\r?\n"
+        data-separator-notes="^Note:"></section>
+
+      <section
+        data-markdown="slides/02-wat-is-ai.md"
+        data-separator="\r?\n===\r?\n"
+        data-separator-vertical="\r?\n---\r?\n"
+        data-separator-notes="^Note:"></section>
+
+      <section
+        data-markdown="slides/03-tooling.md"
+        data-separator="\r?\n===\r?\n"
+        data-separator-vertical="\r?\n---\r?\n"
+        data-separator-notes="^Note:"></section>
+
+      <section
+        data-markdown="slides/04-workshop-prompting.md"
+        data-separator="\r?\n===\r?\n"
+        data-separator-vertical="\r?\n---\r?\n"
+        data-separator-notes="^Note:"></section>
+
+      <section
+        data-markdown="slides/05-workshop-feature.md"
+        data-separator="\r?\n===\r?\n"
+        data-separator-vertical="\r?\n---\r?\n"
+        data-separator-notes="^Note:"></section>
+
+      <!-- Afsluiting: ijsbeer-template (zoals de "Vragen?"-slide in de PPT) -->
+      <section class="divider"
+               data-background-color="#161616"
+               data-background-image="assets/polar-bear.png"
+               data-background-size="52%"
+               data-background-position="right 3% bottom"
+               data-background-repeat="no-repeat">
+        <p class="eyebrow">Tot slot</p>
+        <h2>Vragen?</h2>
+        <p>Dank &amp; veel plezier met <strong>bouwen</strong></p>
+        <aside class="notes">Ruimte voor vragen. Deel evt. links/resources.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: false,
+      slideNumber: 'c/t',
+      width: 1920,          // zelfde canvas als de PPT (26,67x15 inch = 1920x1080pt)
+      height: 1080,         // -> 1pt in de PPT = 1px hier, dus fontgroottes matchen 1-op-1
+      margin: 0,
+      maxScale: 5,          // frame mag flink opschalen zodat het altijd exact 16:9 vult
+      plugins: [RevealNotes, RevealMarkdown, RevealHighlight],
+    });
+  </script>
+</body>
+</html>
