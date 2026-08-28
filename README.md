@@ -32,8 +32,9 @@ Speaker view met notes: druk op `S`.
   | 09 | `09-grenzen.md` | Wanneer niet, blijf leren, maandag-acties |
 
 - `workshops/01-prompting/` — oefenproject bij workshop 1: een klein React-appje
-  met twee bewust ingebouwde bugs. `README.md` is voor de deelnemers,
-  `FACILITATOR.md` bevat de antwoordsleutel (niet vooraf uitdelen).
+  dat deelnemers lokaal draaien. De opdracht en de antwoordsleutel staan in
+  `slides/06-workshop-prompting.md` (deels in de speakernotes) — bewust niet in
+  het project zelf, want de agent leest daar mee.
 - `custom.css` — Arcady-huisstijl bovenop het thema
 - `assets/` — logo, mark en de ruimte-achtergrond
 
