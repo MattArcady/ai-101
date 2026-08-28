@@ -30,6 +30,7 @@ src/
 ├── App.tsx                 # zoekveld, lijst en totaal
 ├── components/StopList.tsx # de lijst met stops
 ├── components/StopRow.tsx  # één regel
-├── data/stops.ts           # de stops
+├── data/stops.json         # de stops
+├── data/stops.ts           # types eromheen
 └── hooks/useTotal.ts       # aantallen en totaalprijs
 ```

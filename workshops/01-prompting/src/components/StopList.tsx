@@ -6,7 +6,7 @@ type Props = {
   stops: Stop[]
   quantities: Quantities
   onQuantityChange: (id: string, quantity: number) => void
-  onRemove: (index: number) => void
+  onRemove: (id: string) => void
 }
 
 export function StopList({ stops, quantities, onQuantityChange, onRemove }: Props) {
@@ -16,13 +16,13 @@ export function StopList({ stops, quantities, onQuantityChange, onRemove }: Prop
 
   return (
     <ul className="stop-list">
-      {stops.map((stop, index) => (
+      {stops.map((stop) => (
         <StopRow
-          key={index}
+          key={stop.id}
           stop={stop}
           quantity={quantities[stop.id] ?? 0}
           onQuantityChange={(quantity) => onQuantityChange(stop.id, quantity)}
-          onRemove={() => onRemove(index)}
+          onRemove={() => onRemove(stop.id)}
         />
       ))}
     </ul>

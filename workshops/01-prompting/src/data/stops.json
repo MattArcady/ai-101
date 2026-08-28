@@ -1,0 +1,254 @@
+[
+  {
+    "id": "ams",
+    "name": "Amsterdam",
+    "country": "Nederland",
+    "price": 120
+  },
+  {
+    "id": "bru",
+    "name": "Brussel",
+    "country": "België",
+    "price": 95
+  },
+  {
+    "id": "gnt",
+    "name": "Gent",
+    "country": "België",
+    "price": 90
+  },
+  {
+    "id": "par",
+    "name": "Parijs",
+    "country": "Frankrijk",
+    "price": 195
+  },
+  {
+    "id": "lyo",
+    "name": "Lyon",
+    "country": "Frankrijk",
+    "price": 130
+  },
+  {
+    "id": "bod",
+    "name": "Bordeaux",
+    "country": "Frankrijk",
+    "price": 140
+  },
+  {
+    "id": "vie",
+    "name": "Wenen",
+    "country": "Oostenrijk",
+    "price": 175
+  },
+  {
+    "id": "szg",
+    "name": "Salzburg",
+    "country": "Oostenrijk",
+    "price": 165
+  },
+  {
+    "id": "ber",
+    "name": "Ber​lijn",
+    "country": "Duitsland",
+    "price": 110
+  },
+  {
+    "id": "muc",
+    "name": "München",
+    "country": "Duitsland",
+    "price": 155
+  },
+  {
+    "id": "ham",
+    "name": "Hamburg",
+    "country": "Duitsland",
+    "price": 125
+  },
+  {
+    "id": "cgn",
+    "name": "Keulen",
+    "country": "Duitsland",
+    "price": 105
+  },
+  {
+    "id": "zrh",
+    "name": "Zürich",
+    "country": "Zwitserland",
+    "price": 260
+  },
+  {
+    "id": "gva",
+    "name": "Genève",
+    "country": "Zwitserland",
+    "price": 245
+  },
+  {
+    "id": "mil",
+    "name": "Milaan",
+    "country": "Italië",
+    "price": 170
+  },
+  {
+    "id": "rom",
+    "name": "Rome",
+    "country": "Italië",
+    "price": 180
+  },
+  {
+    "id": "flr",
+    "name": "Florence",
+    "country": "Italië",
+    "price": 185
+  },
+  {
+    "id": "nap",
+    "name": "Napels",
+    "country": "Italië",
+    "price": 145
+  },
+  {
+    "id": "bcn",
+    "name": "Barcelona",
+    "country": "Spanje",
+    "price": 165
+  },
+  {
+    "id": "mad",
+    "name": "Madrid",
+    "country": "Spanje",
+    "price": 150
+  },
+  {
+    "id": "agp",
+    "name": "Malaga",
+    "country": "Spanje",
+    "price": 135
+  },
+  {
+    "id": "sev",
+    "name": "Sevilla",
+    "country": "Spanje",
+    "price": 130
+  },
+  {
+    "id": "lis",
+    "name": "Lissabon",
+    "country": "Portugal",
+    "price": 140
+  },
+  {
+    "id": "por",
+    "name": "Porto",
+    "country": "Portugal",
+    "price": 160
+  },
+  {
+    "id": "dub",
+    "name": "Dublin",
+    "country": "Ierland",
+    "price": 175
+  },
+  {
+    "id": "edi",
+    "name": "Edinburgh",
+    "country": "Schotland",
+    "price": 190
+  },
+  {
+    "id": "lon",
+    "name": "Londen",
+    "country": "Engeland",
+    "price": 230
+  },
+  {
+    "id": "cph",
+    "name": "Kopenhagen",
+    "country": "Denemarken",
+    "price": 210
+  },
+  {
+    "id": "osl",
+    "name": "Oslo",
+    "country": "Noorwegen",
+    "price": 240
+  },
+  {
+    "id": "brg",
+    "name": "Bergen",
+    "country": "Noorwegen",
+    "price": 225
+  },
+  {
+    "id": "sto",
+    "name": "Stockholm",
+    "country": "Zweden",
+    "price": 215
+  },
+  {
+    "id": "got",
+    "name": "Göteborg",
+    "country": "Zweden",
+    "price": 180
+  },
+  {
+    "id": "hel",
+    "name": "Helsinki",
+    "country": "Finland",
+    "price": 205
+  },
+  {
+    "id": "tll",
+    "name": "Tallinn",
+    "country": "Estland",
+    "price": 115
+  },
+  {
+    "id": "rix",
+    "name": "Riga",
+    "country": "Letland",
+    "price": 100
+  },
+  {
+    "id": "wien",
+    "name": "Wenen",
+    "country": "Oostenrijk",
+    "price": 175
+  },
+  {
+    "id": "waw",
+    "name": "Warschau",
+    "country": "Polen",
+    "price": 105
+  },
+  {
+    "id": "krk",
+    "name": "Krakau",
+    "country": "Polen",
+    "price": 95
+  },
+  {
+    "id": "prg",
+    "name": "Praag",
+    "country": "Tsjechië",
+    "price": 115
+  },
+  {
+    "id": "bud",
+    "name": "Boedapest",
+    "country": "Hongarije",
+    "price": 140
+  },
+  {
+    "id": "zag",
+    "name": "Zagreb",
+    "country": "Kroatië",
+    "price": 110
+  },
+  {
+    "id": "lju",
+    "name": "Ljubljana",
+    "country": "Slovenië",
+    "price": 120
+  }
+]

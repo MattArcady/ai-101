@@ -12,8 +12,8 @@ export function App() {
     `${stop.name} ${stop.country}`.toLowerCase().includes(query.trim().toLowerCase()),
   )
 
-  function removeStop(index: number) {
-    setStops(stops.filter((_, i) => i !== index))
+  function removeStop(id: string) {
+    setStops(stops.filter((stop) => stop.id !== id))
   }
 
   return (
