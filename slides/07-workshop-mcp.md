@@ -1,7 +1,8 @@
 ## Workshop 1
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
-<p class="eyebrow">Hoofdstuk 06</p>
+<p class="eyebrow">Hoofdstuk 07</p>
+
 ### Twee MCP's koppelen
 
 Note: Handen op het toetsenbord. Hoofdstuk 04 ging over wat MCP ís — nu

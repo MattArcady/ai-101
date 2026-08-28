@@ -1,11 +1,13 @@
-## Workshop 2
+## Workshop 3
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
-<p class="eyebrow">Hoofdstuk 08</p>
+<p class="eyebrow">Hoofdstuk 09 · bonus</p>
+
 ### Een code-review skill bouwen
 
-Note: Twee vliegen: ze maken hun eerste skill, en ze zien met eigen ogen wat
-subagents met je context doen.
+Note: Bonusronde als er tijd over is; kan ook prima als losse
+vervolgsessie. Twee vliegen: ze schrijven opnieuw een skill, en ze zien met
+eigen ogen wat subagents met je context doen.
 
 ---
 
@@ -58,7 +60,7 @@ aanleiding.
 ## Deel B — loslaten op echte code
 
 ```sh
-git apply workshop-2/favorieten-en-prijsfilter.patch
+git apply workshop-3/favorieten-en-prijsfilter.patch
 npm test        # 7 groen
 ```
 
@@ -130,5 +132,5 @@ Note: Vraag concreet: welke uitleg herhaal jij het vaakst? Dat is je eerste
 skill. Release-procedure, PR-beschrijving in jullie format, hoe je een
 migratie draait.
 
-Bruggetje naar hoofdstuk 09: dit werkt omdat jíj de review nog leest. De
+Bruggetje naar hoofdstuk 10: dit werkt omdat jíj de review nog leest. De
 skill vervangt je oordeel niet, hij verzamelt alleen sneller.

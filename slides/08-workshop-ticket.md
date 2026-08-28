@@ -1,12 +1,13 @@
-## Workshop 3
+## Workshop 2
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
-<p class="eyebrow">Hoofdstuk 09 · bonus</p>
+<p class="eyebrow">Hoofdstuk 08</p>
+
 ### Van ticket naar werkende feature
 
-Note: Bonusronde als er tijd over is. Alles komt hier samen: een skill
-schrijven (workshop 2), context sturen (hoofdstuk 05) en valideren
-(hoofdstuk 04). Kan ook prima als losse vervolgsessie.
+Note: Hier komt alles samen: een skill schrijven, context sturen
+(hoofdstuk 05) en valideren (hoofdstuk 04). Hun eerste eigen skill, dus
+neem de tijd voor het skelet.
 
 ---
 
@@ -139,4 +140,5 @@ Het gaat erover dat een ticket dat goed genoeg is voor een agent, ook het
 ticket is waar een junior collega mee vooruit kan. Slecht opgeschreven werk
 wordt niet beter door er een agent op te zetten.
 
-Bruggetje naar hoofdstuk 10: en tóch blijf jij degene die het nakijkt.
+Bruggetje naar hoofdstuk 09: en tóch blijf jij degene die het nakijkt —
+daarom zetten we in de volgende workshop een skill op je eigen werk.
