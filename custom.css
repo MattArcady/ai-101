@@ -89,6 +89,12 @@
   content: ""; position: absolute; left: 0; top: .62em;
   width: .55em; height: .16em; background: var(--arcady-green);
 }
+/* Tweede-niveau bullets: geen groen streepje, alleen het vierkantje */
+.reveal ul ul { margin: .15em 0 .3em; padding-left: 1.3em; }
+.reveal ul ul li { padding-left: .2em; margin: .25em 0; }
+.reveal ul ul li::before { content: none; }
+.reveal ul ul li::marker { color: var(--arcady-grey); }
+
 .reveal ol { margin: .3em 0 0 1.2em; }
 .reveal ol li { margin: .5em 0; color: var(--arcady-body); }
 .reveal ol li::marker { color: var(--arcady-green); font-weight: 800; }
@@ -167,6 +173,29 @@
   border: 0;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,.45);
+}
+
+/* --- Momentum-strepen (groene accentlijnen uit de PPT) -------------
+   Sporadisch accent. Plaats in een .md-slide, bv:
+     <div class="momentum" style="--x:72%; --y:14%; --len:220px"></div>
+   Variabelen (allemaal optioneel):
+     --x / --y   positie t.o.v. de slide-inhoud (0% = linksboven van het
+                 contentblok; --x is % van de slidebreedte). Negatief = van
+                 de rand af laten bloeden.
+     --len       lengte (bv 180px, 30%)
+     --thick     dikte (default 4px, zoals de 4pt-lijn in de PPT)
+   Meerdere strepen? Zet gewoon meerdere <div class="momentum"> neer. */
+.reveal .slides section .momentum {
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  width: var(--len, 200px);
+  height: var(--thick, 4px);
+  background: var(--arcady-green);
+  transform: rotate(var(--rot, 0deg));
+  transform-origin: left center;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* --- Vaste Arcady-logo's in de hoeken ------------------------------- */

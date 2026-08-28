@@ -7,9 +7,9 @@
 - Tokenizer
 - Context
 - Reasoning
-- Confidently wrong
+- Agents
 
-Note: De bouwstenen. Bewust simpel gehouden.
+Note: De bouwstenen.
 
 ---
 
@@ -92,7 +92,7 @@ Relevante info erin = betere antwoorden.
 - Model denkt eerst "hardop"
 - Context vergroten
 - Langer nadenken is niet altijd beter
-  - Zet /effort niet standaard op xhigh/max
+  - Zet effort niet standaard op xhigh/max
 
 Note: Denk aan een kladblaadje voordat het antwoordt. Goed voor wiskunde,
 logica, planning. Voor simpele taken overkill.
@@ -101,14 +101,15 @@ logica, planning. Voor simpele taken overkill.
 
 <p class="eyebrow">Wat is AI</p>
 
-## Waarom zelfverzekerd onzin?
+## Wat is een agent?
 
-- Optimaliseert op *plausibel*, niet op *waar*
-- Geen ingebouwd besef van "ik weet dit niet"
-- Vult gaten met het meest waarschijnlijke antwoord
+- Een LLM **praat** alleen — een agent mag ook **doen**
+- Een agent maakt een extra lus om de LLM heen
+  - denken &rarr; tool gebruiken &rarr; resultaat teruglezen &rarr; denken
+- Tools: bestanden lezen en schrijven, commando's draaien, zoeken, en meer
+- Elke stap komt terug in de **context**
 
-**Gevolg:** altijd valideren wat controleerbaar is.
-
-Note: Het woord: hallucinatie. Geen bug maar een eigenschap van hoe het
-werkt. Daarom leunen we straks op sandboxing en validatie: laat het
-model zijn eigen werk aantoonbaar controleren.
+Note: Dit is de sprong van "chatvenster" naar "collega die je repo openzet".
+Het model bedenkt zelf welke stap nodig is en ziet het resultaat weer
+terug. Verklaart ook waarom een lange agent-sessie je context volloopt:
+elk bestand en elke commando-output blijft erin staan.

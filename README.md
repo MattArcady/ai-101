@@ -17,7 +17,23 @@ Speaker view met notes: druk op `S`.
 ## Bestanden
 
 - `index.html` — het "casco": titel, afsluiting en het inladen van de hoofdstukken
-- `slides/*.md` — één markdown-bestand per hoofdstuk
+- `slides/*.md` — één markdown-bestand per hoofdstuk:
+
+  | # | Bestand | Onderwerp |
+  | --- | --- | --- |
+  | 01 | `01-intro.md` | Wie ben ik, doel van de training |
+  | 02 | `02-wat-is-ai.md` | LLM, tokenizer, context, reasoning, agents |
+  | 03 | `03-modellen-en-kosten.md` | Modelkeuze, tokens = geld, effort |
+  | 04 | `04-tooling.md` | Claude Code, sandboxing, validatie, skills, MCP |
+  | 05 | `05-werkwijze.md` | Context sturen, `CLAUDE.md`, plan-first, sessie-hygiëne |
+  | 06 | `06-workshop-prompting.md` | Workshop 1 — prompt engineering |
+  | 07 | `07-veilig-werken.md` | Secrets, prompt injection, dependencies |
+  | 08 | `08-workshop-feature.md` | Workshop 2 — een feature bouwen |
+  | 09 | `09-grenzen.md` | Wanneer niet, blijf leren, maandag-acties |
+
+- `workshops/01-prompting/` — oefenproject bij workshop 1: een klein React-appje
+  met twee bewust ingebouwde bugs. `README.md` is voor de deelnemers,
+  `FACILITATOR.md` bevat de antwoordsleutel (niet vooraf uitdelen).
 - `custom.css` — Arcady-huisstijl bovenop het thema
 - `assets/` — logo, mark en de ruimte-achtergrond
 
@@ -35,6 +51,23 @@ De styling is overgenomen uit `Arcady PPT klanten Momentum.pptx`:
   (`assets/polar-bear.png`), titel + agenda links.
 - Content-slides zijn effen donker.
 - Het Arcady-logo staat vast linksboven, de mark rechtsonder (zie `index.html`).
+
+### Momentum-strepen
+
+De groene accentlijnen uit de PPT. Sporadisch inzetten — niet elke slide hoeft er
+een. Plaats ze handmatig in een `.md`-slide en tune de positie op de content:
+
+```html
+<div class="momentum" style="--x:-2%; --y:6%; --len:340px"></div>
+<div class="momentum" style="--x:60%; --y:2%; --len:150px"></div>
+```
+
+Variabelen (allemaal optioneel): `--x`/`--y` = positie t.o.v. het contentblok
+(`--x` is % van de slidebreedte; negatief laat 'm van de rand af bloeden),
+`--len` = lengte, `--thick` = dikte (default 4px = de 4pt-lijn uit de PPT),
+`--rot` = hoek (default 0°, horizontaal zoals in de PPT). Zet meerdere `<div
+class="momentum">` neer voor meerdere strepen. Voorbeeld staat op de intro-divider
+(`slides/01-intro.md`).
 
 ### "Wie ben ik" — foto's vervangen
 
@@ -60,9 +93,14 @@ volgende hoofdstuk, `↓` gaat door de sub-slides.
 
 ## Hoofdstuk toevoegen
 
-1. Maak een nieuw bestand, bijv. `slides/06-afronding.md`.
-2. Voeg in `index.html` een `<section data-markdown="slides/06-afronding.md" …>`
+1. Maak een nieuw bestand, bijv. `slides/10-afronding.md`.
+2. Voeg in `index.html` een `<section data-markdown="slides/10-afronding.md" …>`
    toe (kopieer een bestaande met dezelfde `data-separator`-attributen).
+
+De volgorde in `index.html` bepaalt de volgorde in de presentatie; de nummers
+in de bestandsnamen zijn alleen voor het overzicht. Zet een nieuw hoofdstuk
+ertussen? Hernoem dan ook de volgende bestanden en pas het `Hoofdstuk NN`-label
+in de eyebrow van de divider-slide aan.
 
 ## Handige toetsen
 

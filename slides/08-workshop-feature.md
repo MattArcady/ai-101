@@ -1,7 +1,7 @@
 ## Workshop 2
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
-<p class="eyebrow">Hoofdstuk 05</p>
+<p class="eyebrow">Hoofdstuk 08</p>
 ### Een feature programmeren
 
 Note: Alles samen: prompten + tooling + validatie in een echte codebase.
@@ -36,6 +36,21 @@ Bouw een endpoint /health dat 200 + {"status":"ok"} teruggeeft.
 
 Note: Merk op: doel, expliciete validatiestap, en een grens op de scope.
 Precies de principes uit workshop 1, nu toegepast op code.
+
+---
+
+<p class="eyebrow">Workshop · Bouwen</p>
+
+## De diff reviewen
+
+- Lees de **diff**, niet de samenvatting van de agent
+- Vraag jezelf af: zou ik dit zelf zo schrijven? Snap ik elke regel?
+- Let op: extra bestanden, nieuwe dependencies, weggehaalde checks
+- Commit **klein** — dan is terugdraaien goedkoop
+
+Note: De agent vat zijn eigen werk optimistisch samen. "Klaar en tests
+groen" is geen review. Vooral kijken naar wat er stilletjes bij kwam
+of juist verdween — dat haalt de samenvatting zelden.
 
 ---
 

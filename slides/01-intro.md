@@ -1,6 +1,9 @@
 ## Intro
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
+<div class="momentum" style="--x:-2%; --y:6%; --len:340px"></div>
+<div class="momentum" style="--x:60%; --y:2%; --len:150px"></div>
+
 <p class="eyebrow">Hoofdstuk 01</p>
 
 - Wie ben ik
