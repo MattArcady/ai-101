@@ -29,7 +29,7 @@
                data-background-image="assets/bg-space.jpg"
                data-background-size="cover"
                data-background-color="#141414">
-        <h1>AI Training</h1>
+        <h1>AI 101</h1>
         <p>Van "wat is een LLM?" naar zelf features <strong>bouwen</strong></p>
         <aside class="notes">
           Welkom. Vandaag gaan we van de basis naar zelf aan de slag.
@@ -132,6 +132,9 @@
       width: 1920,          // zelfde canvas als de PPT (26,67x15 inch = 1920x1080pt)
       height: 1080,         // -> 1pt in de PPT = 1px hier, dus fontgroottes matchen 1-op-1
       margin: 0,
+      center: false,        // slides vullen zelf het frame + flex-centering (zie custom.css)
+      display: 'flex',      // reveal toont slides als flex (i.p.v. block), zodat de
+                            // verticale centering in custom.css werkt
       maxScale: 5,          // frame mag flink opschalen zodat het altijd exact 16:9 vult
       plugins: [RevealNotes, RevealMarkdown, RevealHighlight],
     });

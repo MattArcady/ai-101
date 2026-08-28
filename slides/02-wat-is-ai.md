@@ -7,7 +7,6 @@
 - Tokenizer
 - Context
 - Reasoning
-- Agents
 
 Note: De bouwstenen.
 
@@ -25,6 +24,7 @@ Large Language Model
 - Voorspelt telkens het **volgende token**
 - **Loopt door** tot het een eind-token voorspelt
 - Ziet verbanden tussen tokens ongeacht de volgorde: **Transformer**
+- Temperature bepaalt de **variatie**
 
 <div class="tokengen">
 <p class="fragment">De koning is dood.</p>
@@ -36,9 +36,7 @@ Large Language Model
 </div>
 
 
-Note: Kern-analogie: superieure autocomplete. Het "weet" niks op, het
-genereert het meest waarschijnlijke vervolg. Dat verklaart later
-veel gedrag (o.a. hallucinaties).
+Note: Benadruk dat het een voorspelling is, een keuze uit de x aantal meest waarschijnlijke tokens
 
 ---
 
@@ -71,8 +69,8 @@ geen losse tekens.
 ## Context
 
 - De **wereld** van een LLM
-- Alles: system prompt + tools + complete gesprek
-- Als context vol begint te raken, wordt het model **dommer**
+- Opgebouwd uit de system prompt + tools + **complete gesprek**
+- Als de context vol begint te raken, wordt het model **dommer**
   - Attention dilution
   - Lost in the middle
   - Tegenstrijdigheden
@@ -89,27 +87,13 @@ Relevante info erin = betere antwoorden.
 
 ## Reasoning
 
+*Moet ik met de auto naar de wasstraat om de hoek of kan ik ook lopend?* <br/>
+Thinking: **De gebruiker wil naar de wasstraat, dit betekent waarschijnlijk dat hij zijn auto wil wassen. Maar de wasstraat is om de hoek, dus dit is prima te lopen. Lopen is ook gezonder dan voor een klein stukje de auto te starten, en waarschijnlijk net zo snel. De gebruiker kan beter lopend gaan.**<br/>
+Answer: Je kunt het beste lopend naar de wasstraat, dit is net zo snel en gezonder.
+
 - Model denkt eerst "hardop"
-- Context vergroten
+- Context vergroten, zijn eigen output is immers ook weer context in de volgende stap
 - Langer nadenken is niet altijd beter
-  - Zet effort niet standaard op xhigh/max
 
 Note: Denk aan een kladblaadje voordat het antwoordt. Goed voor wiskunde,
 logica, planning. Voor simpele taken overkill.
-
----
-
-<p class="eyebrow">Wat is AI</p>
-
-## Wat is een agent?
-
-- Een LLM **praat** alleen — een agent mag ook **doen**
-- Een agent maakt een extra lus om de LLM heen
-  - denken &rarr; tool gebruiken &rarr; resultaat teruglezen &rarr; denken
-- Tools: bestanden lezen en schrijven, commando's draaien, zoeken, en meer
-- Elke stap komt terug in de **context**
-
-Note: Dit is de sprong van "chatvenster" naar "collega die je repo openzet".
-Het model bedenkt zelf welke stap nodig is en ziet het resultaat weer
-terug. Verklaart ook waarom een lange agent-sessie je context volloopt:
-elk bestand en elke commando-output blijft erin staan.

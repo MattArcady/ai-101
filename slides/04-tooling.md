@@ -4,10 +4,11 @@
 <p class="eyebrow">Hoofdstuk 04</p>
 
 - Harness
-- Sandboxing
+- Rules
 - Validatie
 - Skills
 - MCP
+- Sandboxing
 
 Note: Van chatvenster naar tools die echt in je codebase werken.
 
@@ -15,26 +16,23 @@ Note: Van chatvenster naar tools die echt in je codebase werken.
 
 <p class="eyebrow">Tooling</p>
 
-## Harness
+## Agent (Claude Code)
 
-- Een harness geeft tools aan een LLM en bepaalt de context
-  - welke **tools** bestaan &mdash; files, bash, git, MCP, subagents
-  - wat **mag** zonder vragen &mdash; permissies, sandbox
-  - welke **context** het model ziet &mdash; system prompt, projectinstructies
-  - wat er met de **output** gebeurt &mdash; diff, tests, retry
+- Een LLM **praat** alleen; een agent mag ook **doen**
+- Een agent geeft tools aan een LLM en bepaalt de context
+  - welke **tools** bestaan: 
+    - files, bash, git, MCP, subagents
+  - wat **mag** zonder vragen: 
+    - permissies, auto-mode
+  - welke **context** het model ziet: 
+    - system prompt, projectinstructies
+- Een agent maakt een extra lus om de LLM heen
+  - denken &rarr; tool gebruiken &rarr; resultaat teruglezen &rarr; denken &rarr; antwoorden
+- Elk tool result komt terug in de **context**
 - Zelfde model, andere harness = ander resultaat
   - Sonnet/Opus in Copilot gedraagt zich anders dan in Claude Code
 
-
-Note: Terugkoppelen naar hoofdstuk 02: daar was de agent de lus. De harness
-is alles eromheen dat die lus draait. Copilot = regelaanvulling terwijl
-je typt, geen lus. Claude Code = harness met een agent die meerdere
-stappen zelf zet: files openen, wijzigen, commando's draaien, resultaat
-teruglezen.
-Belangrijkste punt voor de zaal: als het resultaat slecht is, ga dan niet
-eindeloos prompten. Kijk naar de harness — ontbreken er tests om tegen te
-itereren, staan de projectinstructies er niet, heeft het geen toegang tot
-de juiste tool? De volgende vier onderwerpen zijn precies dat.
+Note: Draait een extra loop en draait tool calls. Roept LLM's opnieuw aan met context en tool result
 
 ---
 
@@ -43,9 +41,12 @@ de juiste tool? De volgende vier onderwerpen zijn precies dat.
 ## Rules
 
 - Geef het model **regels**
-- Meeste harnassen ondersteunen **AGENTS.MD**
-- Regels zijn een verzoek, geen verplichting
+- Claude Code hanteert **CLAUDE.md**
+  - `CLAUDE.md` kan genest worden in subfolders
+- Regels zijn een **verzoek**, geen verplichting
 - Code style, tool instructies, documentatie
+- Hou hem kort; hoe groter het bestand, hoe eerder het een suggestie wordt
+- Agent stuurt ook een eigen system prompt mee
 
 Note: Regels worden altijd door de LLM meegenomen in de context. Het is dus contextafhankelijk
 of de regels wel gevolgd worden. 
@@ -56,9 +57,10 @@ of de regels wel gevolgd worden.
 
 ## Validatie
 
-- Geef het model een **feedbackloop**: tests, lint, build, playwright
+- Geef het model een **feedbackloop**
+  - tests, lint, build, playwright/browser
 - Het model controleert zijn eigen werk en is pas klaar als het groen is
-- Schrijf regels in **AGENTS.MD**
+- Schrijf regels in **CLAUDE.md**
 
 Note: De tegenhanger van zelfverzekerde onzin. Als er tests/builds
 zijn, kan de agent itereren tot het klopt. Zonder feedbackloop moet
@@ -73,8 +75,10 @@ jij alles handmatig nalopen. Investeer daarom in checks.
 <div class="momentum" style="--x:-2%; --y:16%; --len:220px"></div>
 
 - Herbruikbare instructies voor terugkerende taken
-- Denk: "zo doen wij een code review / release"
-- Model laadt ze wanneer relevant
+  - /merge-develop
+  - /code-review
+  - /refine-ticket
+- Skills kunnen aangeroepen worden zonder dat je dit expliciet vraagt
 
 Note: Skills = jouw werkwijze verpakt zodat de agent het consistent doet.
 Voorbeeld: een review-checklist, een deploy-procedure. Later meer
@@ -87,11 +91,11 @@ waard naarmate je vaker dezelfde dingen doet.
 ## MCP
 
 - De **hub**: toegang tot systemen buiten je repo
-- Bijvoorbeeld: Azure DevOps (work items, PR's), Figma, Context7 voor documentatie
+  - Azure DevOps (work items, PR's), Figma, Context7 (documentatie)
 - Zelfde regel als bij tools: alles wat terugkomt gaat je **context** in
 - MCP is een **protocol**
 - Zelf MCP servers bouwen
-- MCP versus CLI
+- MCP of CLI?
 
 Note: Model Context Protocol. Je hoeft het protocol niet te kennen, wel
 het idee: één standaard manier om de agent aan je andere systemen te
@@ -106,6 +110,7 @@ hangen. Laat er live eentje zien als de setup het toelaat.
 ## Sandboxing
 
 - Laat de agent werken in een **afgeschermde** omgeving
+  - Docker sbx &rarr;
 - Permissies: wat mag het wel/niet:
   - Filesystem
   - Network

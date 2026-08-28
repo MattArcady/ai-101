@@ -65,12 +65,12 @@ een. Plaats ze handmatig in een `.md`-slide en tune de positie op de content:
 <div class="momentum" style="--x:60%; --y:2%; --len:150px"></div>
 ```
 
-Variabelen (allemaal optioneel): `--x`/`--y` = positie t.o.v. het contentblok
-(`--x` is % van de slidebreedte; negatief laat 'm van de rand af bloeden),
-`--len` = lengte, `--thick` = dikte (default 4px = de 4pt-lijn uit de PPT),
-`--rot` = hoek (default 0°, horizontaal zoals in de PPT). Zet meerdere `<div
-class="momentum">` neer voor meerdere strepen. Voorbeeld staat op de intro-divider
-(`slides/01-intro.md`).
+Variabelen (allemaal optioneel): `--x`/`--y` = positie **t.o.v. het hele 16:9-frame**
+(0% = linksboven, 100% = rechtsonder; negatief laat 'm van de rand af bloeden). Dus
+`--y:5%` staat altijd bovenaan het frame, ook hoger dan de content. `--len` = lengte,
+`--thick` = dikte (default 4px = de 4pt-lijn uit de PPT), `--rot` = hoek (default 0°,
+horizontaal zoals in de PPT). Zet meerdere `<div class="momentum">` neer voor meerdere
+strepen. Voorbeeld staat op de intro-divider (`slides/01-intro.md`).
 
 ### "Wie ben ik" — foto's vervangen
 

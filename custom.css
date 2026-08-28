@@ -40,12 +40,22 @@
 
 /* Links uitgelijnd, met een vaste linkermarge zoals in de PPT --------- */
 .reveal .slides { text-align: left; }
-.reveal .slides > section,
+
+/* Elke (leaf-)slide vult het HELE 16:9-frame en centreert de inhoud zelf
+   met flexbox. Zo staat alles wat je absoluut positioneert (momentum-strepen,
+   .slide-figure) relatief aan het frame — dus --y:5% = altijd bovenaan het
+   frame, ongeacht hoeveel content de slide heeft. */
+.reveal .slides > section:not(.stack),
 .reveal .slides > section > section {
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   padding: 0 7% 0 9%;
-  left: 0 !important;          /* reveal's horizontale centrering uitschakelen */
+  left: 0 !important;
+  top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* verticaal centreren binnen het frame */
 }
 
 /* --- Koppen --------------------------------------------------------- */
@@ -73,7 +83,7 @@
 
 /* Keyword-accent: **vet** wordt groen (zoals "succes" op de cover) ---- */
 .reveal strong { color: var(--arcady-green); font-weight: 800; }
-.reveal em { color: var(--arcady-green-soft); font-style: normal; }
+.reveal em { color: inherit; font-style: italic; }
 
 /* Subtitel-paragraaf direct onder een kop */
 .reveal h2 + p { color: var(--arcady-grey); font-size: 30px; margin-top: -.2em; }
@@ -103,7 +113,8 @@
 .reveal pre { box-shadow: none; width: 100%; margin: .6em 0 0; }
 .reveal pre code {
   max-height: 58vh; border-left: 4px solid var(--arcady-green);
-  border-radius: 4px; background: #111; padding: 1em 1.2em; font-size: 22px;
+  border-radius: 4px; background: #111; padding: 1em 1.2em;
+  font-size: 22px; line-height: 1.5;   /* los van reveal's pre-line-height */
 }
 
 /* --- Titel / scheidingsslides (space-achtergrond) ------------------- */

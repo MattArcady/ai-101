@@ -5,9 +5,9 @@
 
 <p class="eyebrow">Hoofdstuk 05</p>
 
-- Context sturen
+- Context engineering
 - Projectinstructies
-- Plan eerst
+- Plan eerst, dan code
 - Kleine stappen
 - Sessie-hygiëne
 
@@ -16,7 +16,7 @@ Note: Het hoofdstuk waar de meeste winst zit. Niet "welke tool", maar
 
 ---
 
-<p class="eyebrow">Werkwijze</p>
+<p class="eyebrow">Praktische tips</p>
 
 ## Context engineering
 
@@ -26,7 +26,8 @@ Note: Het hoofdstuk waar de meeste winst zit. Niet "welke tool", maar
   - Wat moet het niet doen?
   - Hoe valideren?
 - Ruis is vaak duurder dan te weinig: dump geen hele logs "voor de zekerheid"
-- Vraag gerust om een .md dump, daarna /clear
+- Vraag gerust om een .md dump, daarna `/clear`
+- `/compact` met instructies over wat te bewaren
 
 Note: Terugkoppeling naar de context-slide in hoofdstuk 02. Te weinig
 context = gokwerk. Te veel = het model raakt de kern kwijt. De kunst
@@ -34,7 +35,7 @@ is selecteren, niet stapelen.
 
 ---
 
-<p class="eyebrow">Werkwijze</p>
+<p class="eyebrow">Praktische tips</p>
 
 ## Projectinstructies
 
@@ -42,8 +43,8 @@ is selecteren, niet stapelen.
 - Voorkomt dat je jezelf elke keer moet herhalen
 - Documenteer projectstructuur, code style, design en architectuur patterns
 - Een goede CLAUDE.md scheelt zoekwerk, tijd en tokens
-- Kort houden — het gaat elke beurt mee in de context
-- CLAUDE.md is een levend document, pas het gerust aan wanneer een agent toch iets onverwachts doet
+- Kort houden, het gaat elke beurt mee in de context
+- `CLAUDE.md` is een levend document, pas het gerust aan wanneer een agent toch iets onverwachts doet
 
 ```text
 # Project
@@ -57,21 +58,19 @@ Adhere to the SOLID principles.
 We have a UI kit available at @sparkly/ui and docs at https://sparkly.design.
 ```
 
-Note: Laat live zien hoe je er een aanmaakt. Benadruk: dit is een levend
-bestand. Elke keer dat je iets voor de derde keer uitlegt, hoort het
-hierin. Niet volstoppen — alles kost context.
+Note: claude.md is de bron van alle specifieke know-how van het project
 
 ---
 
-<p class="eyebrow">Werkwijze</p>
+<p class="eyebrow">Praktische tips</p>
 
 ## Plan eerst, dan code
 
 - Laat de agent eerst een **plan** schrijven
 - Kost minder **tokens** dan code
-- Een plan reviewen kost minder tijd dan een code diff
-- Plannen kunnen leven in de repo, bij het ticket of alleen tijdens implementatie
-- /clear je context voordat je een plan laat uitvoeren
+- Een plan **reviewen** kost minder tijd dan een code diff
+- Plannen plek is teamafspraak
+- `/clear` je context voordat je een plan laat uitvoeren
   - Tegenstrijdige argumenten of twijfelend taalgebruik verdwijnt hiermee uit de context
 
 Note: Dit is de goedkoopste kwaliteitsmaatregel die er is. Sluit direct
@@ -80,15 +79,15 @@ waarop je nog goedkoop kunt bijsturen.
 
 ---
 
-<p class="eyebrow">Werkwijze</p>
+<p class="eyebrow">Praktische tips</p>
 
 ## Kleine stappen
 
-- Eén logische wijziging per beurt, dan **valideren**
+- Eén logische wijziging per beurt, dan **valideren** en **reviewen**
 - Knip je plannen op in taakjes
 - Grote opdracht = grote diff = lastiger te reviewen
-- Loopt het vast? Opnieuw beginnen met een betere prompt wint bijna
-  altijd van doormodderen
+- Loop je vast? Opnieuw beginnen met een betere prompt is bijna
+  altijd beter dan doormodderen
 
 Note: De verleiding is om alles in één prompt te gieten. Dat voelt
 efficiënt en kost je meestal meer tijd. Klein + valideren geeft je
@@ -96,12 +95,12 @@ na elke stap een werkend punt om op terug te vallen.
 
 ---
 
-<p class="eyebrow">Werkwijze</p>
+<p class="eyebrow">Praktische tips</p>
 
 ## Sessie-hygiëne
 
 - Nieuwe taak = **nieuwe sessie** (`/clear`)
-- Lang bezig binnen dezelfde taak? .md dump en /clear
+- Lang bezig binnen dezelfde taak? .md dump en `/clear`
 - Tijd om te clearen als het model:
   - zichzelf herhaalt
   - eerdere afspraken vergeet

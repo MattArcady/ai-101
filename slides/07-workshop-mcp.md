@@ -16,8 +16,8 @@ hangen ze er zelf twee aan.
 
 Twee servers, twee soorten kennis die het model **niet heeft**:
 
-- **tourdata** — lokaal, over jóuw project
-- **Context7** — geversioneerde documentatie van libraries
+- **tourdata** Lokaal, over jóuw project
+- **Context7** Geversioneerde documentatie van libraries
 
 ```sh
 cd workshops/tourplanner && npm install

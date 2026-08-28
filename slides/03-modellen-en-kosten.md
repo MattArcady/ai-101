@@ -2,7 +2,7 @@
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
 <div class="momentum" style="--x:58%; --y:3%; --len:180px"></div>
-<div class="momentum" style="--x:-2%; --y:58%; --len:240px"></div>
+<div class="momentum" style="--x:-2%; --y:78%; --len:240px"></div>
 
 <p class="eyebrow">Hoofdstuk 03</p>
 
@@ -19,9 +19,11 @@ altijd de duurste knop indrukken.
 
 ## Welk model wanneer
 
-- **Groot model (Fable/Opus):** architectuur, debuggen, refactors, plannen
-- **Klein model (Sonnet/Haiku):** boilerplate, hernoemen, commit-berichten, vertalen
-- Vuistregel: maak subagents voor simpele taken met een vast model (Sonnet)
+- **Groot model (Fable/Opus):** architectuur, debuggen, plannen
+- **Dagelijks model (Sonnet):** plan uitvoeren, refactors, hernoemen, commit-berichten, vertalen
+- **Klein model (Haiku):** repeterende taakjes, samenvattingen
+- Sonnet met advisor (uitzoeken)
+- Vuistregel: maak subagents voor simpele taken met een vast model (Sonnet/Haiku)
 
 Note: Noem mondeling welke modellen wij nu gebruiken en waar je wisselt.
 Het patroon blijft: moeilijk denkwerk groot, mechanisch werk klein.
@@ -30,29 +32,18 @@ Het patroon blijft: moeilijk denkwerk groot, mechanisch werk klein.
 
 <p class="eyebrow">Modellen &amp; kosten</p>
 
-## Tokens = geld
+## Tokens = usage
 
 <div class="momentum" style="--x:82%; --y:6%; --len:150px"></div>
 
-- Je betaalt per token **in** en **uit**
+- Je betaalt per token **in** en **uit** met usage
 - De **hele context** gaat elke beurt opnieuw mee
   - Gelukkig wordt je context **gecached**
-- Een lange sessie is dan ook duurder
+- Context hygiëne is belangrijk
+- Claude.ai kent twee limits:
+  - 5 uur
+  - 7 dagen
 
 Note: Koppel terug naar de tokenizer-slide. Dit is ook het economische
 argument onder sessie-hygiëne straks: korte, gerichte sessies zijn
 niet alleen slimmer, ze zijn ook goedkoper en sneller.
-
----
-
-<p class="eyebrow">Modellen &amp; kosten</p>
-
-## Reasoning-effort
-
-- Meer nadenken = meer tokens = **trager & duurder**
-- Loont bij: logica, planning, lastige bugs
-- Verspilling bij: hernoemen, formatteren, een simpele vraag
-
-Note: Terugkoppeling naar de reasoning-slide in hoofdstuk 02. Het is een
-schuifknop, geen kwaliteitsknop. Standaard laten staan, omhoog als je
-merkt dat het model de plank misslaat op een denkopgave.

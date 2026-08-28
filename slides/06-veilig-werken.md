@@ -18,7 +18,7 @@ die je gewoon aanhoudt.
 ## Wat gaat er de deur uit?
 
 - Alles in je context gaat naar de provider
-- Ook wat de agent **zelf** openslaat, niet alleen wat jij typt
+- Ook wat de agent **zelf** leest, niet alleen wat jij typt
 - Vuistregel: geen productiedata, geen persoonsgegevens, geen credentials
 
 Note: Mensen denken aan wat ze plakken, niet aan wat de agent leest.
@@ -70,6 +70,7 @@ niet oplettendheid.
 ## Afhankelijkheden
 
 - AI stelt soms packages voor die **niet bestaan** of ongebruikelijk zijn
+- Vraag door over het voorgestelde package
 - Controleer elke nieuwe dependency op usage en actualiteit voor je 'm binnenhaalt
 
 Note: Terugkoppeling naar "zelfverzekerde onzin": een verzonnen
