@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# lokale MCP-configuratie (deelnemers maken deze zelf)
+.mcp.json

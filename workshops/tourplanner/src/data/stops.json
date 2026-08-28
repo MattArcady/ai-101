@@ -57,7 +57,7 @@
     "id": "muc",
     "name": "München",
     "country": "Duitsland",
-    "price": 155.5
+    "price": 156
   },
   {
     "id": "ham",
@@ -75,7 +75,7 @@
     "id": "zrh",
     "name": "Zürich",
     "country": "Zwitserland",
-    "price": 259.5
+    "price": 260
   },
   {
     "id": "gva",
@@ -111,7 +111,7 @@
     "id": "bcn",
     "name": "Barcelona",
     "country": "Spanje",
-    "price": 164.75
+    "price": 165
   },
   {
     "id": "mad",
@@ -135,7 +135,7 @@
     "id": "lis",
     "name": "Lissabon",
     "country": "Portugal",
-    "price": 139.5
+    "price": 140
   },
   {
     "id": "por",
@@ -225,7 +225,7 @@
     "id": "prg",
     "name": "Praag",
     "country": "Tsjechië",
-    "price": 114.5
+    "price": 114
   },
   {
     "id": "bud",

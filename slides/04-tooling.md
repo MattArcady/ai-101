@@ -17,17 +17,14 @@ Note: Van chatvenster naar tools die echt in je codebase werken.
 
 ## Harness
 
-- De **agent** is de bestuurder, de **harness** is de auto
-- Het programma om het model heen. Die bepaalt:
-  - welke **tools** bestaan &mdash; files, bash, git, MCP
+- Een harness geeft tools aan een LLM en bepaalt de context
+  - welke **tools** bestaan &mdash; files, bash, git, MCP, subagents
   - wat **mag** zonder vragen &mdash; permissies, sandbox
   - welke **context** het model ziet &mdash; system prompt, projectinstructies
   - wat er met de **output** gebeurt &mdash; diff, tests, retry
 - Zelfde model, andere harness = ander resultaat
+  - Sonnet/Opus in Copilot gedraagt zich anders dan in Claude Code
 
-<br/>
-
-<p class="fragment"><strong>Winst zit vaker in de harness dan in je prompt.</strong></p>
 
 Note: Terugkoppelen naar hoofdstuk 02: daar was de agent de lus. De harness
 is alles eromheen dat die lus draait. Copilot = regelaanvulling terwijl
@@ -43,15 +40,15 @@ de juiste tool? De volgende vier onderwerpen zijn precies dat.
 
 <p class="eyebrow">Tooling</p>
 
-## Sandboxing
+## Rules
 
-- Laat de agent werken in een **afgeschermde** omgeving
-- Fouten &amp; foute commando's blijven ingeperkt
-- Permissies: wat mag het wel/niet zonder te vragen
+- Geef het model **regels**
+- Meeste harnassen ondersteunen **AGENTS.MD**
+- Regels zijn een verzoek, geen verplichting
+- Code style, tool instructies, documentatie
 
-Note: Vertrouwen komt van inperking, niet van hoop. Denk aan permission
-modes, aparte branches/worktrees, geen prod-toegang. Zo kun je de
-agent meer vrijheid geven zonder risico.
+Note: Regels worden altijd door de LLM meegenomen in de context. Het is dus contextafhankelijk
+of de regels wel gevolgd worden. 
 
 ---
 
@@ -59,11 +56,11 @@ agent meer vrijheid geven zonder risico.
 
 ## Validatie
 
-- Geef het model een **feedbackloop**: tests, linter, types
-- Het model controleert zijn eigen werk
-- "Groen" is objectiever dan "het ziet er goed uit"
+- Geef het model een **feedbackloop**: tests, lint, build, playwright
+- Het model controleert zijn eigen werk en is pas klaar als het groen is
+- Schrijf regels in **AGENTS.MD**
 
-Note: De tegenhanger van zelfverzekerde onzin. Als er tests/typechecks
+Note: De tegenhanger van zelfverzekerde onzin. Als er tests/builds
 zijn, kan de agent itereren tot het klopt. Zonder feedbackloop moet
 jij alles handmatig nalopen. Investeer daarom in checks.
 
@@ -72,6 +69,8 @@ jij alles handmatig nalopen. Investeer daarom in checks.
 <p class="eyebrow">Tooling</p>
 
 ## Skills
+
+<div class="momentum" style="--x:-2%; --y:16%; --len:220px"></div>
 
 - Herbruikbare instructies voor terugkerende taken
 - Denk: "zo doen wij een code review / release"
@@ -87,11 +86,32 @@ waard naarmate je vaker dezelfde dingen doet.
 
 ## MCP
 
-- De **stekkerdoos**: toegang tot systemen buiten je repo
-- Bijvoorbeeld: Azure DevOps (work items, PR's), Figma, een database
+- De **hub**: toegang tot systemen buiten je repo
+- Bijvoorbeeld: Azure DevOps (work items, PR's), Figma, Context7 voor documentatie
 - Zelfde regel als bij tools: alles wat terugkomt gaat je **context** in
-- Let op: het is ook een **invoerkanaal** — daarover meer in hoofdstuk 07
+- MCP is een **protocol**
+- Zelf MCP servers bouwen
+- MCP versus CLI
 
 Note: Model Context Protocol. Je hoeft het protocol niet te kennen, wel
 het idee: één standaard manier om de agent aan je andere systemen te
 hangen. Laat er live eentje zien als de setup het toelaat.
+
+---
+
+<img class="slide-figure" src="assets/sbx.jpeg" alt="Docker SBX">
+
+<p class="eyebrow">Tooling</p>
+
+## Sandboxing
+
+- Laat de agent werken in een **afgeschermde** omgeving
+- Permissies: wat mag het wel/niet:
+  - Filesystem
+  - Network
+  - Tool calls
+  - Scoped Personal Access Tokens voor MCP/azcli
+
+Note: Vertrouwen komt van inperking, niet van hoop. Denk aan permission
+modes, aparte branches/worktrees, geen prod-toegang. Zo kun je de
+agent meer vrijheid geven zonder risico.

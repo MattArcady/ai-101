@@ -166,9 +166,13 @@
   right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  width: var(--fig-w, 39%);
+  /* auto + max in beide richtingen = past binnen de box, verhouding blijft
+     behouden. De hoogte staat los van de tekst (mag hoger). --fig-h in px =
+     canvas-px (frame is 1080 hoog), dus frame-relatief i.p.v. tekst-relatief. */
+  width: auto;
   height: auto;
-  max-width: none;
+  max-width: var(--fig-w, 39%);
+  max-height: var(--fig-h, 820px);
   margin: 0;
   border: 0;
   border-radius: 8px;

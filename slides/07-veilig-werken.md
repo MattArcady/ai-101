@@ -45,6 +45,8 @@ alternatief.
 
 ## Prompt injection
 
+<div class="momentum" style="--x:83%; --y:8%; --len:170px"></div>
+
 - Het model kan **instructies** niet onderscheiden van **data**
 - Tekst uit een issue, webpagina, PR-comment of MCP-antwoord kan een
   verborgen opdracht bevatten

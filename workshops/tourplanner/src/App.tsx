@@ -33,7 +33,7 @@ export function App() {
       />
 
       <p className="count">
-        {visibleStops.length} van {STOPS.length} stops
+        {visibleStops.length} van {stops.length} stops
       </p>
 
       <StopList

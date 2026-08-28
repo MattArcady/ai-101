@@ -1,7 +1,7 @@
 ## Grenzen
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
-<p class="eyebrow">Hoofdstuk 09</p>
+<p class="eyebrow">Hoofdstuk 10</p>
 
 - Wanneer je het beter niet gebruikt
 - Blijf zelf leren
@@ -44,6 +44,8 @@ afhankelijker. Dat onderscheid is het hele verhaal.
 <p class="eyebrow">Grenzen</p>
 
 ## Wat neem je maandag mee
+
+<div class="momentum" style="--x:-2%; --y:9%; --len:300px"></div>
 
 1. Zet een `CLAUDE.md` in je eigen project
 2. Laat de agent **eerst een plan** maken bij je volgende taak

@@ -1,0 +1,1467 @@
+{
+  "bijgewerkt": "2026-08-01",
+  "stops": [
+    {
+      "id": "ams",
+      "name": "Amsterdam",
+      "country": "Nederland",
+      "price": 120,
+      "bezetting": {
+        "jan": 29,
+        "feb": 31,
+        "mrt": 36,
+        "apr": 41,
+        "mei": 47,
+        "jun": 56,
+        "jul": 63,
+        "aug": 61,
+        "sep": 50,
+        "okt": 40,
+        "nov": 31,
+        "dec": 34
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 106
+        },
+        {
+          "jaar": 2025,
+          "prijs": 113
+        },
+        {
+          "jaar": 2026,
+          "prijs": 120
+        }
+      ]
+    },
+    {
+      "id": "bru",
+      "name": "Brussel",
+      "country": "België",
+      "price": 95,
+      "bezetting": {
+        "jan": 40,
+        "feb": 42,
+        "mrt": 48,
+        "apr": 54,
+        "mei": 60,
+        "jun": 70,
+        "jul": 78,
+        "aug": 76,
+        "sep": 64,
+        "okt": 52,
+        "nov": 42,
+        "dec": 46
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 84
+        },
+        {
+          "jaar": 2025,
+          "prijs": 89
+        },
+        {
+          "jaar": 2026,
+          "prijs": 95
+        }
+      ]
+    },
+    {
+      "id": "gnt",
+      "name": "Gent",
+      "country": "België",
+      "price": 90,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 62,
+        "apr": 68,
+        "mei": 75,
+        "jun": 86,
+        "jul": 95,
+        "aug": 92,
+        "sep": 79,
+        "okt": 66,
+        "nov": 55,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 79
+        },
+        {
+          "jaar": 2025,
+          "prijs": 85
+        },
+        {
+          "jaar": 2026,
+          "prijs": 90
+        }
+      ]
+    },
+    {
+      "id": "par",
+      "name": "Parijs",
+      "country": "Frankrijk",
+      "price": 195,
+      "bezetting": {
+        "jan": 55,
+        "feb": 57,
+        "mrt": 62,
+        "apr": 68,
+        "mei": 74,
+        "jun": 84,
+        "jul": 92,
+        "aug": 90,
+        "sep": 78,
+        "okt": 66,
+        "nov": 57,
+        "dec": 60
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 172
+        },
+        {
+          "jaar": 2025,
+          "prijs": 183
+        },
+        {
+          "jaar": 2026,
+          "prijs": 195
+        }
+      ]
+    },
+    {
+      "id": "lyo",
+      "name": "Lyon",
+      "country": "Frankrijk",
+      "price": 130,
+      "bezetting": {
+        "jan": 38,
+        "feb": 40,
+        "mrt": 46,
+        "apr": 53,
+        "mei": 59,
+        "jun": 70,
+        "jul": 78,
+        "aug": 76,
+        "sep": 63,
+        "okt": 51,
+        "nov": 40,
+        "dec": 44
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 114
+        },
+        {
+          "jaar": 2025,
+          "prijs": 122
+        },
+        {
+          "jaar": 2026,
+          "prijs": 130
+        }
+      ]
+    },
+    {
+      "id": "bod",
+      "name": "Bordeaux",
+      "country": "Frankrijk",
+      "price": 140,
+      "bezetting": {
+        "jan": 41,
+        "feb": 43,
+        "mrt": 48,
+        "apr": 54,
+        "mei": 60,
+        "jun": 69,
+        "jul": 77,
+        "aug": 75,
+        "sep": 64,
+        "okt": 52,
+        "nov": 43,
+        "dec": 47
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 123
+        },
+        {
+          "jaar": 2025,
+          "prijs": 132
+        },
+        {
+          "jaar": 2026,
+          "prijs": 140
+        }
+      ]
+    },
+    {
+      "id": "vie",
+      "name": "Wenen",
+      "country": "Oostenrijk",
+      "price": 175,
+      "bezetting": {
+        "jan": 54,
+        "feb": 56,
+        "mrt": 62,
+        "apr": 68,
+        "mei": 75,
+        "jun": 85,
+        "jul": 93,
+        "aug": 91,
+        "sep": 79,
+        "okt": 66,
+        "nov": 56,
+        "dec": 60
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 154
+        },
+        {
+          "jaar": 2025,
+          "prijs": 164
+        },
+        {
+          "jaar": 2026,
+          "prijs": 175
+        }
+      ]
+    },
+    {
+      "id": "szg",
+      "name": "Salzburg",
+      "country": "Oostenrijk",
+      "price": 165,
+      "bezetting": {
+        "jan": 55,
+        "feb": 56,
+        "mrt": 62,
+        "apr": 68,
+        "mei": 73,
+        "jun": 82,
+        "jul": 90,
+        "aug": 88,
+        "sep": 77,
+        "okt": 66,
+        "nov": 56,
+        "dec": 60
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 145
+        },
+        {
+          "jaar": 2025,
+          "prijs": 155
+        },
+        {
+          "jaar": 2026,
+          "prijs": 165
+        }
+      ]
+    },
+    {
+      "id": "ber",
+      "name": "Berlijn",
+      "country": "Duitsland",
+      "price": 110,
+      "bezetting": {
+        "jan": 39,
+        "feb": 41,
+        "mrt": 47,
+        "apr": 53,
+        "mei": 59,
+        "jun": 70,
+        "jul": 78,
+        "aug": 76,
+        "sep": 64,
+        "okt": 51,
+        "nov": 41,
+        "dec": 45
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 97
+        },
+        {
+          "jaar": 2025,
+          "prijs": 103
+        },
+        {
+          "jaar": 2026,
+          "prijs": 110
+        }
+      ]
+    },
+    {
+      "id": "muc",
+      "name": "München",
+      "country": "Duitsland",
+      "price": 156,
+      "bezetting": {
+        "jan": 41,
+        "feb": 43,
+        "mrt": 49,
+        "apr": 54,
+        "mei": 59,
+        "jun": 68,
+        "jul": 76,
+        "aug": 74,
+        "sep": 63,
+        "okt": 52,
+        "nov": 43,
+        "dec": 47
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 137
+        },
+        {
+          "jaar": 2025,
+          "prijs": 147
+        },
+        {
+          "jaar": 2026,
+          "prijs": 156
+        }
+      ]
+    },
+    {
+      "id": "ham",
+      "name": "Hamburg",
+      "country": "Duitsland",
+      "price": 125,
+      "bezetting": {
+        "jan": 54,
+        "feb": 56,
+        "mrt": 62,
+        "apr": 68,
+        "mei": 74,
+        "jun": 84,
+        "jul": 92,
+        "aug": 90,
+        "sep": 78,
+        "okt": 66,
+        "nov": 56,
+        "dec": 60
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 110
+        },
+        {
+          "jaar": 2025,
+          "prijs": 118
+        },
+        {
+          "jaar": 2026,
+          "prijs": 125
+        }
+      ]
+    },
+    {
+      "id": "cgn",
+      "name": "Keulen",
+      "country": "Duitsland",
+      "price": 105,
+      "bezetting": {
+        "jan": 36,
+        "feb": 38,
+        "mrt": 45,
+        "apr": 52,
+        "mei": 58,
+        "jun": 69,
+        "jul": 78,
+        "aug": 76,
+        "sep": 63,
+        "okt": 50,
+        "nov": 38,
+        "dec": 43
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 92
+        },
+        {
+          "jaar": 2025,
+          "prijs": 99
+        },
+        {
+          "jaar": 2026,
+          "prijs": 105
+        }
+      ]
+    },
+    {
+      "id": "zrh",
+      "name": "Zürich",
+      "country": "Zwitserland",
+      "price": 260,
+      "bezetting": {
+        "jan": 40,
+        "feb": 42,
+        "mrt": 48,
+        "apr": 54,
+        "mei": 59,
+        "jun": 69,
+        "jul": 77,
+        "aug": 75,
+        "sep": 63,
+        "okt": 52,
+        "nov": 42,
+        "dec": 46
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 229
+        },
+        {
+          "jaar": 2025,
+          "prijs": 244
+        },
+        {
+          "jaar": 2026,
+          "prijs": 260
+        }
+      ]
+    },
+    {
+      "id": "gva",
+      "name": "Genève",
+      "country": "Zwitserland",
+      "price": 245,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 61,
+        "apr": 68,
+        "mei": 74,
+        "jun": 85,
+        "jul": 94,
+        "aug": 91,
+        "sep": 78,
+        "okt": 66,
+        "nov": 55,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 216
+        },
+        {
+          "jaar": 2025,
+          "prijs": 230
+        },
+        {
+          "jaar": 2026,
+          "prijs": 245
+        }
+      ]
+    },
+    {
+      "id": "mil",
+      "name": "Milaan",
+      "country": "Italië",
+      "price": 170,
+      "bezetting": {
+        "jan": 54,
+        "feb": 56,
+        "mrt": 62,
+        "apr": 67,
+        "mei": 73,
+        "jun": 83,
+        "jul": 90,
+        "aug": 88,
+        "sep": 77,
+        "okt": 66,
+        "nov": 56,
+        "dec": 60
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 150
+        },
+        {
+          "jaar": 2025,
+          "prijs": 160
+        },
+        {
+          "jaar": 2026,
+          "prijs": 170
+        }
+      ]
+    },
+    {
+      "id": "rom",
+      "name": "Rome",
+      "country": "Italië",
+      "price": 180,
+      "bezetting": {
+        "jan": 38,
+        "feb": 40,
+        "mrt": 46,
+        "apr": 52,
+        "mei": 59,
+        "jun": 69,
+        "jul": 78,
+        "aug": 76,
+        "sep": 63,
+        "okt": 50,
+        "nov": 40,
+        "dec": 44
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 158
+        },
+        {
+          "jaar": 2025,
+          "prijs": 169
+        },
+        {
+          "jaar": 2026,
+          "prijs": 180
+        }
+      ]
+    },
+    {
+      "id": "flr",
+      "name": "Florence",
+      "country": "Italië",
+      "price": 185,
+      "bezetting": {
+        "jan": 41,
+        "feb": 43,
+        "mrt": 48,
+        "apr": 54,
+        "mei": 59,
+        "jun": 68,
+        "jul": 76,
+        "aug": 74,
+        "sep": 63,
+        "okt": 52,
+        "nov": 43,
+        "dec": 46
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 163
+        },
+        {
+          "jaar": 2025,
+          "prijs": 174
+        },
+        {
+          "jaar": 2026,
+          "prijs": 185
+        }
+      ]
+    },
+    {
+      "id": "nap",
+      "name": "Napels",
+      "country": "Italië",
+      "price": 145,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 61,
+        "apr": 68,
+        "mei": 74,
+        "jun": 84,
+        "jul": 92,
+        "aug": 90,
+        "sep": 78,
+        "okt": 66,
+        "nov": 55,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 128
+        },
+        {
+          "jaar": 2025,
+          "prijs": 136
+        },
+        {
+          "jaar": 2026,
+          "prijs": 145
+        }
+      ]
+    },
+    {
+      "id": "bcn",
+      "name": "Barcelona",
+      "country": "Spanje",
+      "price": 165,
+      "bezetting": {
+        "jan": 54,
+        "feb": 56,
+        "mrt": 61,
+        "apr": 67,
+        "mei": 72,
+        "jun": 81,
+        "jul": 88,
+        "aug": 86,
+        "sep": 76,
+        "okt": 65,
+        "nov": 56,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 145
+        },
+        {
+          "jaar": 2025,
+          "prijs": 155
+        },
+        {
+          "jaar": 2026,
+          "prijs": 165
+        }
+      ]
+    },
+    {
+      "id": "mad",
+      "name": "Madrid",
+      "country": "Spanje",
+      "price": 150,
+      "bezetting": {
+        "jan": 39,
+        "feb": 41,
+        "mrt": 47,
+        "apr": 53,
+        "mei": 59,
+        "jun": 69,
+        "jul": 77,
+        "aug": 75,
+        "sep": 63,
+        "okt": 51,
+        "nov": 41,
+        "dec": 45
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 132
+        },
+        {
+          "jaar": 2025,
+          "prijs": 141
+        },
+        {
+          "jaar": 2026,
+          "prijs": 150
+        }
+      ]
+    },
+    {
+      "id": "agp",
+      "name": "Malaga",
+      "country": "Spanje",
+      "price": 135,
+      "bezetting": {
+        "jan": 52,
+        "feb": 54,
+        "mrt": 61,
+        "apr": 67,
+        "mei": 74,
+        "jun": 85,
+        "jul": 94,
+        "aug": 91,
+        "sep": 78,
+        "okt": 65,
+        "nov": 54,
+        "dec": 58
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 119
+        },
+        {
+          "jaar": 2025,
+          "prijs": 127
+        },
+        {
+          "jaar": 2026,
+          "prijs": 135
+        }
+      ]
+    },
+    {
+      "id": "sev",
+      "name": "Sevilla",
+      "country": "Spanje",
+      "price": 130,
+      "bezetting": {
+        "jan": 54,
+        "feb": 56,
+        "mrt": 61,
+        "apr": 67,
+        "mei": 73,
+        "jun": 83,
+        "jul": 91,
+        "aug": 89,
+        "sep": 77,
+        "okt": 65,
+        "nov": 56,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 114
+        },
+        {
+          "jaar": 2025,
+          "prijs": 122
+        },
+        {
+          "jaar": 2026,
+          "prijs": 130
+        }
+      ]
+    },
+    {
+      "id": "lis",
+      "name": "Lissabon",
+      "country": "Portugal",
+      "price": 140,
+      "bezetting": {
+        "jan": 37,
+        "feb": 39,
+        "mrt": 45,
+        "apr": 52,
+        "mei": 58,
+        "jun": 69,
+        "jul": 77,
+        "aug": 75,
+        "sep": 62,
+        "okt": 49,
+        "nov": 39,
+        "dec": 43
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 123
+        },
+        {
+          "jaar": 2025,
+          "prijs": 132
+        },
+        {
+          "jaar": 2026,
+          "prijs": 140
+        }
+      ]
+    },
+    {
+      "id": "por",
+      "name": "Porto",
+      "country": "Portugal",
+      "price": 160,
+      "bezetting": {
+        "jan": 40,
+        "feb": 42,
+        "mrt": 48,
+        "apr": 53,
+        "mei": 59,
+        "jun": 68,
+        "jul": 76,
+        "aug": 74,
+        "sep": 63,
+        "okt": 51,
+        "nov": 42,
+        "dec": 46
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 141
+        },
+        {
+          "jaar": 2025,
+          "prijs": 150
+        },
+        {
+          "jaar": 2026,
+          "prijs": 160
+        }
+      ]
+    },
+    {
+      "id": "dub",
+      "name": "Dublin",
+      "country": "Ierland",
+      "price": 175,
+      "bezetting": {
+        "jan": 52,
+        "feb": 55,
+        "mrt": 61,
+        "apr": 67,
+        "mei": 74,
+        "jun": 84,
+        "jul": 92,
+        "aug": 90,
+        "sep": 78,
+        "okt": 65,
+        "nov": 55,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 154
+        },
+        {
+          "jaar": 2025,
+          "prijs": 164
+        },
+        {
+          "jaar": 2026,
+          "prijs": 175
+        }
+      ]
+    },
+    {
+      "id": "edi",
+      "name": "Edinburgh",
+      "country": "Schotland",
+      "price": 190,
+      "bezetting": {
+        "jan": 54,
+        "feb": 56,
+        "mrt": 61,
+        "apr": 67,
+        "mei": 72,
+        "jun": 81,
+        "jul": 89,
+        "aug": 87,
+        "sep": 76,
+        "okt": 65,
+        "nov": 56,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 167
+        },
+        {
+          "jaar": 2025,
+          "prijs": 179
+        },
+        {
+          "jaar": 2026,
+          "prijs": 190
+        }
+      ]
+    },
+    {
+      "id": "lon",
+      "name": "Londen",
+      "country": "Engeland",
+      "price": 230,
+      "bezetting": {
+        "jan": 38,
+        "feb": 40,
+        "mrt": 46,
+        "apr": 52,
+        "mei": 58,
+        "jun": 69,
+        "jul": 77,
+        "aug": 75,
+        "sep": 63,
+        "okt": 50,
+        "nov": 40,
+        "dec": 44
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 202
+        },
+        {
+          "jaar": 2025,
+          "prijs": 216
+        },
+        {
+          "jaar": 2026,
+          "prijs": 230
+        }
+      ]
+    },
+    {
+      "id": "cph",
+      "name": "Kopenhagen",
+      "country": "Denemarken",
+      "price": 210,
+      "bezetting": {
+        "jan": 40,
+        "feb": 42,
+        "mrt": 48,
+        "apr": 53,
+        "mei": 58,
+        "jun": 68,
+        "jul": 75,
+        "aug": 73,
+        "sep": 62,
+        "okt": 51,
+        "nov": 42,
+        "dec": 46
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 185
+        },
+        {
+          "jaar": 2025,
+          "prijs": 197
+        },
+        {
+          "jaar": 2026,
+          "prijs": 210
+        }
+      ]
+    },
+    {
+      "id": "osl",
+      "name": "Oslo",
+      "country": "Noorwegen",
+      "price": 240,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 61,
+        "apr": 67,
+        "mei": 73,
+        "jun": 83,
+        "jul": 91,
+        "aug": 89,
+        "sep": 77,
+        "okt": 65,
+        "nov": 55,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 211
+        },
+        {
+          "jaar": 2025,
+          "prijs": 226
+        },
+        {
+          "jaar": 2026,
+          "prijs": 240
+        }
+      ]
+    },
+    {
+      "id": "brg",
+      "name": "Bergen",
+      "country": "Noorwegen",
+      "price": 225,
+      "bezetting": {
+        "jan": 35,
+        "feb": 37,
+        "mrt": 44,
+        "apr": 51,
+        "mei": 57,
+        "jun": 68,
+        "jul": 77,
+        "aug": 75,
+        "sep": 62,
+        "okt": 48,
+        "nov": 37,
+        "dec": 42
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 198
+        },
+        {
+          "jaar": 2025,
+          "prijs": 212
+        },
+        {
+          "jaar": 2026,
+          "prijs": 225
+        }
+      ]
+    },
+    {
+      "id": "sto",
+      "name": "Stockholm",
+      "country": "Zweden",
+      "price": 215,
+      "bezetting": {
+        "jan": 39,
+        "feb": 41,
+        "mrt": 47,
+        "apr": 53,
+        "mei": 58,
+        "jun": 68,
+        "jul": 76,
+        "aug": 74,
+        "sep": 62,
+        "okt": 51,
+        "nov": 41,
+        "dec": 45
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 189
+        },
+        {
+          "jaar": 2025,
+          "prijs": 202
+        },
+        {
+          "jaar": 2026,
+          "prijs": 215
+        }
+      ]
+    },
+    {
+      "id": "got",
+      "name": "Göteborg",
+      "country": "Zweden",
+      "price": 180,
+      "bezetting": {
+        "jan": 52,
+        "feb": 54,
+        "mrt": 60,
+        "apr": 67,
+        "mei": 73,
+        "jun": 84,
+        "jul": 92,
+        "aug": 90,
+        "sep": 77,
+        "okt": 64,
+        "nov": 54,
+        "dec": 58
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 158
+        },
+        {
+          "jaar": 2025,
+          "prijs": 169
+        },
+        {
+          "jaar": 2026,
+          "prijs": 180
+        }
+      ]
+    },
+    {
+      "id": "hel",
+      "name": "Helsinki",
+      "country": "Finland",
+      "price": 205,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 61,
+        "apr": 66,
+        "mei": 72,
+        "jun": 82,
+        "jul": 89,
+        "aug": 87,
+        "sep": 76,
+        "okt": 65,
+        "nov": 55,
+        "dec": 59
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 180
+        },
+        {
+          "jaar": 2025,
+          "prijs": 193
+        },
+        {
+          "jaar": 2026,
+          "prijs": 205
+        }
+      ]
+    },
+    {
+      "id": "tll",
+      "name": "Tallinn",
+      "country": "Estland",
+      "price": 115,
+      "bezetting": {
+        "jan": 37,
+        "feb": 39,
+        "mrt": 45,
+        "apr": 51,
+        "mei": 58,
+        "jun": 68,
+        "jul": 77,
+        "aug": 75,
+        "sep": 62,
+        "okt": 49,
+        "nov": 39,
+        "dec": 43
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 101
+        },
+        {
+          "jaar": 2025,
+          "prijs": 108
+        },
+        {
+          "jaar": 2026,
+          "prijs": 115
+        }
+      ]
+    },
+    {
+      "id": "rix",
+      "name": "Riga",
+      "country": "Letland",
+      "price": 100,
+      "bezetting": {
+        "jan": 40,
+        "feb": 42,
+        "mrt": 47,
+        "apr": 53,
+        "mei": 58,
+        "jun": 68,
+        "jul": 75,
+        "aug": 73,
+        "sep": 62,
+        "okt": 51,
+        "nov": 42,
+        "dec": 45
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 88
+        },
+        {
+          "jaar": 2025,
+          "prijs": 94
+        },
+        {
+          "jaar": 2026,
+          "prijs": 100
+        }
+      ]
+    },
+    {
+      "id": "waw",
+      "name": "Warschau",
+      "country": "Polen",
+      "price": 105,
+      "bezetting": {
+        "jan": 52,
+        "feb": 54,
+        "mrt": 60,
+        "apr": 67,
+        "mei": 73,
+        "jun": 83,
+        "jul": 91,
+        "aug": 89,
+        "sep": 77,
+        "okt": 65,
+        "nov": 54,
+        "dec": 58
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 92
+        },
+        {
+          "jaar": 2025,
+          "prijs": 99
+        },
+        {
+          "jaar": 2026,
+          "prijs": 105
+        }
+      ]
+    },
+    {
+      "id": "krk",
+      "name": "Krakau",
+      "country": "Polen",
+      "price": 95,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 60,
+        "apr": 66,
+        "mei": 71,
+        "jun": 80,
+        "jul": 87,
+        "aug": 86,
+        "sep": 75,
+        "okt": 64,
+        "nov": 55,
+        "dec": 58
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 84
+        },
+        {
+          "jaar": 2025,
+          "prijs": 89
+        },
+        {
+          "jaar": 2026,
+          "prijs": 95
+        }
+      ]
+    },
+    {
+      "id": "prg",
+      "name": "Praag",
+      "country": "Tsjechië",
+      "price": 114,
+      "bezetting": {
+        "jan": 38,
+        "feb": 40,
+        "mrt": 46,
+        "apr": 52,
+        "mei": 58,
+        "jun": 68,
+        "jul": 76,
+        "aug": 74,
+        "sep": 62,
+        "okt": 50,
+        "nov": 40,
+        "dec": 44
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 100
+        },
+        {
+          "jaar": 2025,
+          "prijs": 107
+        },
+        {
+          "jaar": 2026,
+          "prijs": 114
+        }
+      ]
+    },
+    {
+      "id": "bud",
+      "name": "Boedapest",
+      "country": "Hongarije",
+      "price": 140,
+      "bezetting": {
+        "jan": 51,
+        "feb": 53,
+        "mrt": 59,
+        "apr": 66,
+        "mei": 73,
+        "jun": 84,
+        "jul": 92,
+        "aug": 90,
+        "sep": 77,
+        "okt": 64,
+        "nov": 53,
+        "dec": 57
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 123
+        },
+        {
+          "jaar": 2025,
+          "prijs": 132
+        },
+        {
+          "jaar": 2026,
+          "prijs": 140
+        }
+      ]
+    },
+    {
+      "id": "zag",
+      "name": "Zagreb",
+      "country": "Kroatië",
+      "price": 110,
+      "bezetting": {
+        "jan": 53,
+        "feb": 55,
+        "mrt": 60,
+        "apr": 66,
+        "mei": 72,
+        "jun": 82,
+        "jul": 90,
+        "aug": 88,
+        "sep": 76,
+        "okt": 64,
+        "nov": 55,
+        "dec": 58
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 97
+        },
+        {
+          "jaar": 2025,
+          "prijs": 103
+        },
+        {
+          "jaar": 2026,
+          "prijs": 110
+        }
+      ]
+    },
+    {
+      "id": "lju",
+      "name": "Ljubljana",
+      "country": "Slovenië",
+      "price": 120,
+      "bezetting": {
+        "jan": 35,
+        "feb": 38,
+        "mrt": 44,
+        "apr": 51,
+        "mei": 57,
+        "jun": 68,
+        "jul": 76,
+        "aug": 74,
+        "sep": 61,
+        "okt": 48,
+        "nov": 38,
+        "dec": 42
+      },
+      "prijshistorie": [
+        {
+          "jaar": 2024,
+          "prijs": 106
+        },
+        {
+          "jaar": 2025,
+          "prijs": 113
+        },
+        {
+          "jaar": 2026,
+          "prijs": 120
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "noord",
+      "naam": "Scandinavië-lus",
+      "stops": [
+        "cph",
+        "got",
+        "sto",
+        "hel",
+        "osl",
+        "brg"
+      ],
+      "dagen": 18
+    },
+    {
+      "id": "zuid",
+      "naam": "Middellandse route",
+      "stops": [
+        "bcn",
+        "mad",
+        "sev",
+        "agp",
+        "lis",
+        "por"
+      ],
+      "dagen": 21
+    },
+    {
+      "id": "midden",
+      "naam": "Alpen & steden",
+      "stops": [
+        "muc",
+        "szg",
+        "vie",
+        "prg",
+        "zrh",
+        "mil"
+      ],
+      "dagen": 14
+    },
+    {
+      "id": "oost",
+      "naam": "Oost-Europa",
+      "stops": [
+        "waw",
+        "krk",
+        "prg",
+        "bud",
+        "zag",
+        "lju"
+      ],
+      "dagen": 16
+    },
+    {
+      "id": "west",
+      "naam": "Kust & eilanden",
+      "stops": [
+        "ams",
+        "bru",
+        "gnt",
+        "par",
+        "lon",
+        "dub",
+        "edi"
+      ],
+      "dagen": 20
+    }
+  ]
+}

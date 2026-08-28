@@ -1,6 +1,9 @@
 ## Modellen &amp; kosten
 <!-- .slide: data-background-color="#161616" data-background-image="assets/polar-bear.png" data-background-size="52%" data-background-position="right 3% bottom" data-background-repeat="no-repeat" class="divider" -->
 
+<div class="momentum" style="--x:58%; --y:3%; --len:180px"></div>
+<div class="momentum" style="--x:-2%; --y:58%; --len:240px"></div>
+
 <p class="eyebrow">Hoofdstuk 03</p>
 
 - Welk model wanneer
@@ -28,6 +31,8 @@ Het patroon blijft: moeilijk denkwerk groot, mechanisch werk klein.
 <p class="eyebrow">Modellen &amp; kosten</p>
 
 ## Tokens = geld
+
+<div class="momentum" style="--x:82%; --y:6%; --len:150px"></div>
 
 - Je betaalt per token **in** en **uit**
 - De **hele context** gaat elke beurt opnieuw mee

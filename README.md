@@ -26,15 +26,17 @@ Speaker view met notes: druk op `S`.
   | 03 | `03-modellen-en-kosten.md` | Modelkeuze, tokens = geld, effort |
   | 04 | `04-tooling.md` | Claude Code, sandboxing, validatie, skills, MCP |
   | 05 | `05-werkwijze.md` | Context sturen, `CLAUDE.md`, plan-first, sessie-hygiëne |
-  | 06 | `06-workshop-prompting.md` | Workshop 1 — prompt engineering |
+  | 06 | `06-workshop-mcp.md` | Workshop 1 — twee MCP's koppelen |
   | 07 | `07-veilig-werken.md` | Secrets, prompt injection, dependencies |
-  | 08 | `08-workshop-feature.md` | Workshop 2 — een feature bouwen |
-  | 09 | `09-grenzen.md` | Wanneer niet, blijf leren, maandag-acties |
+  | 08 | `08-workshop-skills.md` | Workshop 2 — code-review skill met subagents |
+  | 09 | `09-workshop-ticket.md` | Workshop 3 (bonus) — van ticket naar feature |
+  | 10 | `10-grenzen.md` | Wanneer niet, blijf leren, maandag-acties |
 
-- `workshops/01-prompting/` — oefenproject bij workshop 1: een klein React-appje
-  dat deelnemers lokaal draaien. De opdracht en de antwoordsleutel staan in
-  `slides/06-workshop-prompting.md` (deels in de speakernotes) — bewust niet in
-  het project zelf, want de agent leest daar mee.
+- `workshops/tourplanner/` — de oefen-codebase voor beide workshops: een kleine
+  React-app, plus een lokale MCP-server (`tools/tour-mcp/`), een skelet voor de
+  code-review skill (`.claude/skills/`) en de reviewpatch voor workshop 2
+  (`workshop-2/`). De opdrachten en antwoorden staan in de slides, niet in het
+  project — de agent leest daar mee.
 - `custom.css` — Arcady-huisstijl bovenop het thema
 - `assets/` — logo, mark en de ruimte-achtergrond
 
@@ -94,8 +96,8 @@ volgende hoofdstuk, `↓` gaat door de sub-slides.
 
 ## Hoofdstuk toevoegen
 
-1. Maak een nieuw bestand, bijv. `slides/10-afronding.md`.
-2. Voeg in `index.html` een `<section data-markdown="slides/10-afronding.md" …>`
+1. Maak een nieuw bestand, bijv. `slides/11-afronding.md`.
+2. Voeg in `index.html` een `<section data-markdown="slides/11-afronding.md" …>`
    toe (kopieer een bestaande met dezelfde `data-separator`-attributen).
 
 De volgorde in `index.html` bepaalt de volgorde in de presentatie; de nummers
