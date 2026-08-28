@@ -49,7 +49,7 @@
   },
   {
     "id": "ber",
-    "name": "Ber​lijn",
+    "name": "Berlijn",
     "country": "Duitsland",
     "price": 110
   },
@@ -57,7 +57,7 @@
     "id": "muc",
     "name": "München",
     "country": "Duitsland",
-    "price": 155
+    "price": 155.5
   },
   {
     "id": "ham",
@@ -75,7 +75,7 @@
     "id": "zrh",
     "name": "Zürich",
     "country": "Zwitserland",
-    "price": 260
+    "price": 259.5
   },
   {
     "id": "gva",
@@ -111,7 +111,7 @@
     "id": "bcn",
     "name": "Barcelona",
     "country": "Spanje",
-    "price": 165
+    "price": 164.75
   },
   {
     "id": "mad",
@@ -135,7 +135,7 @@
     "id": "lis",
     "name": "Lissabon",
     "country": "Portugal",
-    "price": 140
+    "price": 139.5
   },
   {
     "id": "por",
@@ -210,12 +210,6 @@
     "price": 100
   },
   {
-    "id": "wien",
-    "name": "Wenen",
-    "country": "Oostenrijk",
-    "price": 175
-  },
-  {
     "id": "waw",
     "name": "Warschau",
     "country": "Polen",
@@ -231,7 +225,7 @@
     "id": "prg",
     "name": "Praag",
     "country": "Tsjechië",
-    "price": 115
+    "price": 114.5
   },
   {
     "id": "bud",

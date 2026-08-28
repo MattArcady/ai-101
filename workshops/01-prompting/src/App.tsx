@@ -32,6 +32,10 @@ export function App() {
         onChange={(event) => setQuery(event.target.value)}
       />
 
+      <p className="count">
+        {visibleStops.length} van {STOPS.length} stops
+      </p>
+
       <StopList
         stops={visibleStops}
         quantities={quantities}

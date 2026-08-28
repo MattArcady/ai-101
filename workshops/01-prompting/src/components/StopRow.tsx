@@ -14,7 +14,7 @@ export function StopRow({ stop, quantity, onQuantityChange, onRemove }: Props) {
         <strong>{stop.name}</strong>
         <span className="stop-country">{stop.country}</span>
       </div>
-      <span className="stop-price">€ {stop.price}</span>
+      <span className="stop-price">€ {Math.round(stop.price)}</span>
       <input
         className="stop-quantity"
         type="number"
