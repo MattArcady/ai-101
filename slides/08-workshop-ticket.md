@@ -53,7 +53,7 @@ agent die alleen de titel leest, bouwt het alsnog.
 1. zoekt in `tickets/` op nummer of omschrijving
 2. controleer de status
 3. leest de acceptatiecriteria
-4. geef een stappenplan aan de gebruiker
+4. geef een plan aan de gebruiker en wacht op akkoord
 5. bouwt precies dat en niet meer
 6. schrijft een test per criterium
 7. verifieert en rapporteert
@@ -68,16 +68,16 @@ Dan zie je meteen of hij het ticket goed gelezen heeft, vóórdat er code is.
 
 <p class="eyebrow">Workshop · Ticket</p>
 
-## Deel B — draaien
+## Implementeren
 
 ```text
-/ticket-bouwen 142
+/implement-ticket die over budget
 ```
 
-en daarna, met een schone sessie:
+en daarna, na `/clear` en schone git
 
 ```text
-/ticket-bouwen die van het budget
+/implement-ticket 142
 ```
 
 Werkt je skill op allebei?

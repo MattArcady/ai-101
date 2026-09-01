@@ -1,5 +1,5 @@
 ---
-name: ticket-bouwen
+name: implement-ticket
 description: Zoek een ticket op in tickets/ en bouw het na, inclusief tests en verificatie. Gebruik dit wanneer de gebruiker een ticketnummer noemt of vraagt om een ticket op te pakken.
 ---
 
