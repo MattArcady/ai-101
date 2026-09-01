@@ -1,6 +1,9 @@
 node_modules/
 dist/
 *.tsbuildinfo
+test-results/
+playwright-report/
+blob-report/
 
 # lokale MCP-configuratie (deelnemers maken deze zelf)
 .mcp.json

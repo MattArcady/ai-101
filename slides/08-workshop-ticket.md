@@ -70,15 +70,13 @@ Dan zie je meteen of hij het ticket goed gelezen heeft, vóórdat er code is.
 
 ## Implementeren
 
-```text
-/implement-ticket die over budget
-```
+De skill testen
+
+`/implement-ticket die over budget`
 
 en daarna, na `/clear` en schone git
 
-```text
-/implement-ticket 142
-```
+`/implement-ticket 142`
 
 Werkt je skill op allebei?
 
@@ -95,12 +93,12 @@ doordat iemand het goed heeft opgeschreven.
 
 <p class="eyebrow">Workshop · Ticket</p>
 
-## Deel C — nakijken
+## Reviewen
 
 - Zeven criteria, hoeveel tests heeft hij geschreven?
 - Heeft hij `npm test` en `npx tsc -b` echt **gedraaid**?
 - Is er iets gebouwd dat **buiten scope** stond?
-- Klopt criterium 3 — is *precies* op budget binnen budget?
+- Klopt criterium 3: is *exact* op budget ook binnen budget?
 
 Note: Ik heb dit ticket zelf nagebouwd om te controleren dat het klopt: het
 is te doen in één beurt, en 5 tests (criterium 2 t/m 6) plus de bestaande 7
@@ -116,12 +114,12 @@ per criterium schrijft, mist dat.
 
 <p class="eyebrow">Workshop · Ticket</p>
 
-## Wat je meeneemt
+## Conclusie
 
-- Een goed ticket is **context die je maar één keer schrijft**
-- Acceptatiecriteria worden je tests — letterlijk
-- "Buiten scope" is het stukje dat scope creep tegenhoudt
-- Laat de agent **verifiëren**, niet samenvatten
+- Een goed beschreven ticket is **waardevol**
+- Acceptatiecriteria worden je **tests**
+- **Buiten scope** zorgt ervoor dat een agent niet doordraait
+- Laat de agent **verifiëren**
 
 Note: Draai de conclusie om voor de zaal: dit gaat maar half over de skill.
 Het gaat erover dat een ticket dat goed genoeg is voor een agent, ook het

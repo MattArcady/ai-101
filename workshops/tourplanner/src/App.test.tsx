@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { App } from './App'
@@ -66,5 +66,34 @@ describe('Tourplanner', () => {
     await user.type(nights, '2')
 
     expect(screen.getByText('€ 240', { selector: 'strong' })).toBeInTheDocument()
+  })
+
+  it('valt bij een leeg veld terug op de laatste waarde in plaats van 0', async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    const nights = screen.getByLabelText('Aantal nachten in Amsterdam')
+    await user.clear(nights)
+    await user.type(nights, '3')
+    await user.clear(nights)
+    await user.tab()
+
+    expect(nights).toHaveValue(3)
+    expect(screen.getByText('€ 360', { selector: 'strong' })).toBeInTheDocument()
+  })
+
+  it('verliest de waarde niet als je scrollt met het veld gefocust', async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    const nights = screen.getByLabelText('Aantal nachten in Amsterdam')
+    await user.clear(nights)
+    await user.type(nights, '3')
+    await user.pointer({ target: nights, keys: '[MouseLeft]' })
+
+    fireEvent.wheel(nights, { deltaY: 100 })
+
+    expect(nights).not.toHaveFocus()
+    expect(nights).toHaveValue(3)
   })
 })

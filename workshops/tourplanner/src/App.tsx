@@ -1,16 +1,30 @@
 import { useState } from 'react'
 import { STOPS } from './data/stops'
 import { StopList } from './components/StopList'
+import { PriceFilter } from './components/PriceFilter'
+import { useFavorieten } from './hooks/useFavorieten'
 import { useTotal } from './hooks/useTotal'
 
 export function App() {
   const [stops, setStops] = useState(STOPS)
   const [query, setQuery] = useState('')
+  const [maxPrijs, setMaxPrijs] = useState('')
+  const { favorieten, toggleFavoriet } = useFavorieten()
   const { quantities, total, setQuantity } = useTotal(stops)
 
-  const visibleStops = stops.filter((stop) =>
+  const gefilterd = stops.filter((stop) =>
     `${stop.name} ${stop.country}`.toLowerCase().includes(query.trim().toLowerCase()),
   )
+
+  const visibleStops = gefilterd.filter((stop) => stop.price <= (Number(maxPrijs) || Infinity))
+
+  const favorieteStops = stops.filter(
+    (stop) =>
+      favorieten.includes(stop.id) &&
+      `${stop.name} ${stop.country}`.toLowerCase().includes(query.trim().toLowerCase()),
+  )
+
+  localStorage.setItem('favorieten', JSON.stringify(favorieten))
 
   function removeStop(id: string) {
     setStops(stops.filter((stop) => stop.id !== id))
@@ -32,8 +46,14 @@ export function App() {
         onChange={(event) => setQuery(event.target.value)}
       />
 
+      <PriceFilter maxPrijs={maxPrijs} onChange={setMaxPrijs} />
+
       <p className="count">
-        {visibleStops.length} van {stops.length} stops
+        {favorieteStops.length} favoriet ·{' '}
+      </p>
+
+      <p className="count">
+        {gefilterd.length} van {stops.length} stops
       </p>
 
       <StopList
@@ -41,6 +61,8 @@ export function App() {
         quantities={quantities}
         onQuantityChange={setQuantity}
         onRemove={removeStop}
+        favorieten={favorieten}
+        onToggleFavoriet={toggleFavoriet}
       />
 
       <footer className="totals">

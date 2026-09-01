@@ -3,134 +3,79 @@
 
 <p class="eyebrow">Hoofdstuk 09 · bonus</p>
 
-### Een code-review skill bouwen
+### Playwright opzetten en een verstopte bug vinden
 
 Note: Bonusronde als er tijd over is; kan ook prima als losse
-vervolgsessie. Twee vliegen: ze schrijven opnieuw een skill, en ze zien met
-eigen ogen wat subagents met je context doen.
+vervolgsessie. Twee vliegen: de agent zet zelf tooling op, en ze zien dat
+"Done" en "klopt" niet hetzelfde zijn.
 
 ---
 
-<p class="eyebrow">Workshop · Skills</p>
+<p class="eyebrow">Workshop · e2e</p>
 
 ## Wat we gaan doen
 
-Een skill die **twee subagents** op dezelfde diff zet:
+- Laat de agent **Playwright opzetten** in dit project
+- Schrijf e2e-tests op basis van **acceptatiecriteria** van een ticket
+- Kijk wat er breekt
 
-- reviewer A — correctheid: bugs, edge cases, foute aannames
-- reviewer B — conventies &amp; eenvoud: herhaling, dode code, afwijkingen
-
-Daarna voegt de skill hun bevindingen samen tot één lijst.
-
-Note: Twee lenzen in plaats van één review, omdat één agent die op alles
-tegelijk let overal het halve werk doet. En omdat het meteen laat zien
-waarom je dit ópsplitst — dat is deel C.
+Note: Het gaat niet om Playwright leren, maar om zien dat toolinstallatie
+door een agent net zo goed werk is dat je controleert — en dat "Done" een
+claim is, geen garantie.
 
 ---
 
-<p class="eyebrow">Workshop · Skills</p>
+<p class="eyebrow">Workshop · e2e</p>
 
-## Deel A — de skill schrijven
+## Playwright
 
-In `.claude/skills/code-review/SKILL.md` staat een skelet met vier TODO's.
+Geen kant-en-klare config. Vraag de agent:
 
-```markdown
----
-name: code-review
-description: Review de openstaande wijzigingen op bugs
-  en op conventies/eenvoud.
----
+```text
+Zet Playwright op in dit project voor e2e-tests tegen de
+lopende dev server. Voeg een npm-script test:e2e toe.
 ```
 
-De `description` bepaalt **wanneer** de skill geladen wordt — schrijf 'm
-voor je toekomstige zelf.
-
-Note: Laat ze de TODO's zelf invullen: welke diff, twee subagents in één
-bericht (anders lopen ze niet parallel), welk rapportageformaat, en wat er
-gebeurt bij dubbele of tegenstrijdige bevindingen.
-
-Frontmatter-valkuil: een vage description betekent dat de skill nooit
-vanzelf laadt. "Review code" is te vaag; noem het artefact (diff, PR) en de
-aanleiding.
+Note: Laat de agent zelf kiezen: `@playwright/test` installeren,
+`npx playwright install`, een `playwright.config.ts` met de juiste
+`baseURL`, en een script in `package.json`. Dit is bewust geen
+kant-en-klaar recept — controleer of hij de dev server (`npm run dev`)
+daadwerkelijk aan de praat krijgt vóór de tests draaien, en of hij een
+poort kiest die niet al bezet is.
 
 ---
 
-<p class="eyebrow">Workshop · Skills</p>
+<p class="eyebrow">Workshop · e2e</p>
 
-## Deel B — loslaten op echte code
+## Testen schrijven
 
-```sh
-git apply workshop-3/favorieten-en-prijsfilter.patch
-npm test        # 7 groen
+`tickets/TOUR-165-favorieten-prijsfilter.md` gaat over favorieten en een
+prijsfilter, geleverd vorige sprint. Zeven groene unit tests, status
+**Done**.
+
+```text
+Schrijf e2e-tests voor TOUR-165 op basis van de
+acceptatiecriteria, en draai ze.
 ```
 
-Een feature van een collega: favorieten + een prijsfilter.
-**De tests zijn groen.** Draai nu je skill.
+Note: De crux: laat de agent de tests baseren op de acceptatiecriteria,
+niet op de code. Criterium 5 (filter op "0" toont niets) en criterium 6
+(de teller klopt na het filter) zijn de twee die breken.
 
-Note: Groene tests, en er zit genoeg mis. Dat is de opzet: als tests het
-zouden vangen had je de review niet nodig.
-
-Wat erin zit, voor het geval de zaal het mist: de teller telt de lijst
-vóór het prijsfilter; `Number(maxPrijs) || Infinity` betekent dat "0"
-alles toont; er wordt tijdens de render naar localStorage geschreven; een
-lege `catch {}`; de zoeklogica staat er twee keer; `setFavorieten` wordt
-geëxporteerd maar nooit gebruikt; en er is geen enkele test bijgekomen.
-
-Niet vooraf verklappen — laat de subagents het doen.
+Referentie: `Number(maxPrijs) || Infinity` behandelt "0" als "geen
+filter", dus alles blijft zichtbaar. De teller telt `gefilterd.length`
+(vóór het prijsfilter) in plaats van wat er echt in de lijst staat.
 
 ---
 
-<p class="eyebrow">Workshop · Skills</p>
+<p class="eyebrow">Workshop · e2e</p>
 
-## Deel C — kijk naar je context
+## Conclusie
 
-Draai `/context` **vóór** en **ná** de review.
+- **Done** is een claim van de vorige sprint, geen garantie voor de toekomst
+- e2e opzetten met een agent is eenvoudig
+- Testen schrijven is **goedkoop geworden**
 
-- De subagents lezen tientallen bestanden en greppen zich suf
-- Jouw hoofdcontext groeit met **alleen hun eindoordeel**
-
-Doe daarna dezelfde review inline, zonder subagents. Kijk opnieuw.
-
-Note: Dit is het moment waar de workshop om draait, en het werkt omdat ze
-een getal zien veranderen in plaats van een principe horen.
-
-Een subagent heeft zijn eigen context: al het zoekwerk, de doodlopende
-sporen en de redeneringen blijven daar. Jij krijgt de conclusie. Inline
-komt dat allemaal in jouw venster terecht — en de rest van je sessie wordt
-er dommer van (attention dilution, hoofdstuk 02).
-
----
-
-<p class="eyebrow">Workshop · Skills</p>
-
-## Wanneer wel, wanneer niet
-
-**Wel:** breed zoeken · meerdere perspectieven · wegwerpcontext
-
-**Niet:** je hebt de tussenstappen zelf nodig · ze zien elkaars werk niet ·
-drie agents op een taak van één regel
-
-Note: Eerlijk blijven over de kosten: subagents draaien parallel en kosten
-dus tokens tegelijk. Voor een kleine taak ben je duurder en trager uit.
-
-De vuistregel: delegeer werk waarvan je het resultaat wilt, niet de route.
-Moet je zelf meekijken hoe iets tot stand komt, doe het dan inline.
-
----
-
-<p class="eyebrow">Workshop · Skills</p>
-
-## Wat je meeneemt
-
-- Een skill is een **markdown-bestand** met frontmatter, meer niet
-- Zet erin wat jij elke keer opnieuw uitlegt
-- Subagents houden je hoofdcontext schoon
-
-**Schrijf er maandag één voor je eigen team.**
-
-Note: Vraag concreet: welke uitleg herhaal jij het vaakst? Dat is je eerste
-skill. Release-procedure, PR-beschrijving in jullie format, hoe je een
-migratie draait.
-
-Bruggetje naar hoofdstuk 10: dit werkt omdat jíj de review nog leest. De
-skill vervangt je oordeel niet, hij verzamelt alleen sneller.
+Note: Bruggetje naar hoofdstuk 10: ook hier geldt — jij blijft degene die
+beoordeelt of het écht klopt. Een agent die zelf Playwright optuigt is
+indrukwekkend, maar "het draait" is nog geen "het is goed opgezet".
