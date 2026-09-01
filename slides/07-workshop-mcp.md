@@ -21,7 +21,7 @@ Twee tools, twee soorten kennis die het model **niet heeft**:
 
 ```sh
 git clone https://github.com/MattArcady/ai-101
-cd ai-101/workshops/tourplanner && npm i
+cd ai-101/workshops/tourplanner && npm i && claude
 ```
 
 Note: Dit is het onderscheid dat blijft hangen: de ene server ontsluit data
@@ -71,14 +71,13 @@ Note: Soms combineert de agent data van de mcp met data op internet, zoals infor
 
 ## Context7
 
-Een remote server, dus een ander soort configuratie:
+Vraag Claude om een MCP server toe te voegen: 
 
-```sh
-claude mcp add --transport http context7 https://mcp.context7.com/mcp
-```
+*Voeg de context7 mcp server toe aan dit project*
 
-Note: Bewust een andere manier dan deel A: daar een projectbestand, hier de
-CLI. Beide moeten ze een keer gedaan hebben. `claude mcp list` om te checken.
+Herstart daarna Claude Code weer
+
+Note: Ook config aanpassingen kunnen door ai worden gedaan
 
 Met vijftien man op één kantoor-IP kun je tegen rate limits aanlopen — laat
 ze vooraf een gratis key halen, of deel er één.
@@ -87,9 +86,11 @@ ze vooraf een gratis key halen, of deel er één.
 
 <p class="eyebrow">Workshop · MCP</p>
 
-## Deel B — versies zijn het punt
+## Context7 — versies zijn het punt
 
 Wij gebruiken **TanStack Query v5** (zie `package.json`)
+
+*Je kunt `/advisor` gebruiken*
 
 ```text
 Vervang de directe import van stops.json door een
@@ -98,7 +99,9 @@ TanStack Query-hook die public/tourdata.json ophaalt.
 Gebruik context7 voor /tanstack/query, versie 5.
 ```
 
-Vraag daarna hetzelfde voor **v4** — en vergelijk
+<br/>
+<br/>
+Vraag daarna hetzelfde voor v4
 
 Note: TanStack Query is een goede testcase omdat v4 → v5 flink brak:
 positionele argumenten weg (alles in één object), `isLoading` werd
@@ -118,16 +121,13 @@ te laten lossen.
 
 <p class="eyebrow">Workshop · MCP</p>
 
-## Wat je meeneemt
+## Conclusie
 
-- Een MCP-server aanzetten is **twee regels config**, geen project
-- Eigen data → eigen server; die van ons is 120 regels
-- Documentatie mét versie slaat een hele klasse fouten weg
-- Alles wat terugkomt kost **context** — zet niet alles aan
+- Een MCP-server gebruiken is **niet moeilijk**
+- MCP server calls kosten tokens, maar besparen WebSearch-tokens
+- Geversioneerde documentatie
 
-Note: Afsluiten met de vraag: welke server zou jij maandag aanzetten? Bij de
-meesten is dat Azure DevOps of een database. Laat de Azure DevOps-server
-zien als de tijd het toelaat.
+*Welke kansen zie jij binnen je eigen project?*
 
-En het tegenwicht: tien servers aan betekent honderd tools in je context
-voordat je iets gevraagd hebt. Aanzetten wat je die dag nodig hebt.
+Note: Bij MCP hoef je niet gelijk te denken aan eigen data voeden of tickets ophalen van Jira/Devops/Github. 
+Ook gewoon een simpele documentatie-server helpt enorm
