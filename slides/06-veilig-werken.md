@@ -4,9 +4,8 @@
 <p class="eyebrow">Hoofdstuk 06</p>
 
 - Wat gaat er de deur uit
-- Secrets
 - Prompt injection
-- Afhankelijkheden
+- Packages
 
 Note: Kort maar niet overslaan. Geen angstverhaal: vier concrete regels
 die je gewoon aanhoudt.
@@ -24,20 +23,6 @@ die je gewoon aanhoudt.
 Note: Mensen denken aan wat ze plakken, niet aan wat de agent leest.
 Noem hier onze eigen afspraken: welke tools zijn goedgekeurd en waar
 mag je ze op inzetten.
-
----
-
-<p class="eyebrow">Veilig werken</p>
-
-## Secrets
-
-- `.env`, tokens, API-keys: **nooit** plakken
-- Let op wat er in commits belandt
-- Per ongeluk gedeeld? **Roteren**
-
-Note: Een key die één keer in een prompt heeft gestaan, beschouw je als
-gelekt. Roteren is een kwartiertje werk; het alternatief is geen
-alternatief.
 
 ---
 
@@ -67,7 +52,7 @@ niet oplettendheid.
 
 <p class="eyebrow">Veilig werken</p>
 
-## Afhankelijkheden
+## Packages
 
 - AI stelt soms packages voor die **niet bestaan** of ongebruikelijk zijn
 - Vraag door over het voorgestelde package

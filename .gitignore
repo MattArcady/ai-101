@@ -6,3 +6,4 @@
 
 # Node (voor het geval je later live-server/tooling toevoegt)
 node_modules/
+workshops/tourplanner/.mcp.json

@@ -26,8 +26,8 @@ Note: Het hoofdstuk waar de meeste winst zit. Niet "welke tool", maar
   - Wat moet het niet doen?
   - Hoe valideren?
 - Ruis is vaak duurder dan te weinig: dump geen hele logs "voor de zekerheid"
-- Vraag gerust om een .md dump, daarna `/clear`
-- `/compact` met instructies over wat te bewaren
+- Vraag om een samenvatting als .md, daarna `/clear`
+- `/compact` met instructies over wat belangrijk is
 
 Note: Terugkoppeling naar de context-slide in hoofdstuk 02. Te weinig
 context = gokwerk. Te veel = het model raakt de kern kwijt. De kunst
@@ -48,7 +48,7 @@ is selecteren, niet stapelen.
 
 ```text
 # Project
-- Run: npm start (poort 4200)
+- Run: npm start (port 4200)
 - Tests: npm test — run them always before you end a task
 - Don't use React Router anymore, we switched to TanStack
 - Don't edit: /generated
@@ -69,7 +69,7 @@ Note: claude.md is de bron van alle specifieke know-how van het project
 - Laat de agent eerst een **plan** schrijven
 - Kost minder **tokens** dan code
 - Een plan **reviewen** kost minder tijd dan een code diff
-- Plannen plek is teamafspraak
+- Plannen bewaren is teamafspraak
 - `/clear` je context voordat je een plan laat uitvoeren
   - Tegenstrijdige argumenten of twijfelend taalgebruik verdwijnt hiermee uit de context
 
@@ -86,7 +86,7 @@ waarop je nog goedkoop kunt bijsturen.
 - Eén logische wijziging per beurt, dan **valideren** en **reviewen**
 - Knip je plannen op in taakjes
 - Grote opdracht = grote diff = lastiger te reviewen
-- Loop je vast? Opnieuw beginnen met een betere prompt is bijna
+- Loop je vast? `/clear` met een betere prompt is bijna
   altijd beter dan doormodderen
 
 Note: De verleiding is om alles in één prompt te gieten. Dat voelt
@@ -100,8 +100,8 @@ na elke stap een werkend punt om op terug te vallen.
 ## Sessie-hygiëne
 
 - Nieuwe taak = **nieuwe sessie** (`/clear`)
-- Lang bezig binnen dezelfde taak? .md dump en `/clear`
-- Tijd om te clearen als het model:
+- Lang bezig binnen dezelfde taak? `/compact`
+- Tijd om te compacten/clearen als het model:
   - zichzelf herhaalt
   - eerdere afspraken vergeet
   - dingen "repareert" die al eerder gefixed zijn

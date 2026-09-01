@@ -3,7 +3,7 @@
 
 <p class="eyebrow">Hoofdstuk 04</p>
 
-- Harness
+- Agent
 - Rules
 - Validatie
 - Skills
@@ -27,9 +27,9 @@ Note: Van chatvenster naar tools die echt in je codebase werken.
   - welke **context** het model ziet: 
     - system prompt, projectinstructies
 - Een agent maakt een extra lus om de LLM heen
-  - denken &rarr; tool gebruiken &rarr; resultaat teruglezen &rarr; denken &rarr; antwoorden
+  - llm &rarr; tool gebruiken &rarr; resultaat teruglezen &rarr; llm &rarr; antwoord
 - Elk tool result komt terug in de **context**
-- Zelfde model, andere harness = ander resultaat
+- Zelfde model, andere agent = **ander resultaat**
   - Sonnet/Opus in Copilot gedraagt zich anders dan in Claude Code
 
 Note: Draait een extra loop en draait tool calls. Roept LLM's opnieuw aan met context en tool result

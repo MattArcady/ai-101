@@ -7,8 +7,7 @@
 <p class="eyebrow">Hoofdstuk 03</p>
 
 - Welk model wanneer
-- Tokens = geld
-- Reasoning-effort
+- Tokens = usage
 
 Note: Kort en praktisch. Doel: mensen kiezen straks bewust in plaats van
 altijd de duurste knop indrukken.
@@ -22,8 +21,8 @@ altijd de duurste knop indrukken.
 - **Groot model (Fable/Opus):** architectuur, debuggen, plannen
 - **Dagelijks model (Sonnet):** plan uitvoeren, refactors, hernoemen, commit-berichten, vertalen
 - **Klein model (Haiku):** repeterende taakjes, samenvattingen
-- Sonnet met advisor (uitzoeken)
-- Vuistregel: maak subagents voor simpele taken met een vast model (Sonnet/Haiku)
+- Sonnet met `/advisor`
+- Vuistregel: gebruik Opus voor plannen en onderzoeken, Sonnet voor dagelijks werk
 
 Note: Noem mondeling welke modellen wij nu gebruiken en waar je wisselt.
 Het patroon blijft: moeilijk denkwerk groot, mechanisch werk klein.

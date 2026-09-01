@@ -3,7 +3,7 @@
 
 <p class="eyebrow">Hoofdstuk 07</p>
 
-### Twee MCP's koppelen
+### Twee MCP tools gebruiken
 
 Note: Handen op het toetsenbord. Hoofdstuk 04 ging over wat MCP ís — nu
 hangen ze er zelf twee aan.
@@ -14,13 +14,14 @@ hangen ze er zelf twee aan.
 
 ## Wat we gaan doen
 
-Twee servers, twee soorten kennis die het model **niet heeft**:
+Twee tools, twee soorten kennis die het model **niet heeft**:
 
-- **tourdata** Lokaal, over jóuw project
-- **Context7** Geversioneerde documentatie van libraries
+- **tourdata** Lokaal, over ons project
+- **Context7** Documentatie van libraries
 
 ```sh
-cd workshops/tourplanner && npm install
+git clone https://github.com/MattArcady/ai-101
+cd ai-101/workshops/tourplanner && npm i
 ```
 
 Note: Dit is het onderscheid dat blijft hangen: de ene server ontsluit data
@@ -34,16 +35,14 @@ Setup vooraf laten doen. Node 20+ vereist.
 
 <p class="eyebrow">Workshop · MCP</p>
 
-## Deel A — je eigen server
+## Lokale database
 
-In `tools/tour-mcp/` staat een MCP-server over `public/tourdata.json`:
-bezetting per maand, prijshistorie, routes.
+In `tools/tour-mcp/` staat een MCP-server met info over bezetting per maand, prijshistorie en routes.
 
-```sh
-cp .mcp.json.voorbeeld .mcp.json
-```
+- Kopieer `.mcp.json.voorbeeld` naar `.mcp.json`
+- Herstart Claude Code en keur de nieuwe server goed
+- `/mcp` laat alle MCP servers zien
 
-Herstart Claude Code, keur de server goed, en check met `/mcp`.
 
 Note: `.mcp.json` is projectconfiguratie: hij staat in de repo en geldt voor
 iedereen die hem opent. Claude vraagt éénmalig of je die server vertrouwt —
@@ -58,41 +57,25 @@ prijshistorie, routes.
 
 <p class="eyebrow">Workshop · MCP</p>
 
-## Deel A — proberen
+## Lokale database
 
-1. Vraag eerst **zonder** de server: *"welke stops zitten in juli boven
-   90% bezetting?"*
-2. Zet de server aan en stel dezelfde vraag
-3. Nu de echte stap — laat het in **code** landen:
+1. Haal alle routes op
+2. Welke stops zitten op het vaste land?
+3. welke stops zitten in augustus boven 80% bezetting?
 
-```text
-Zet achter elke stop de bezetting van juli.
-Haal die op via de tourdata MCP-server.
-```
-
-Note: Stap 1 is belangrijk: laat ze het model eerst zien gokken of eerlijk
-"dat kan ik niet weten" zien zeggen. Zonder dat contrast is stap 2 magie
-zonder betekenis.
-
-Stap 3 is waar het kwartje valt: MCP is niet alleen een vraagbaak naast je
-werk, het is een bron die de agent tijdens het bouwen gebruikt.
-
-Let op de kosten: elk toolresultaat gaat je context in. Laat `/context`
-zien na een paar brede vragen.
+Note: Soms combineert de agent data van de mcp met data op internet, zoals informatie over eilanden
 
 ---
 
 <p class="eyebrow">Workshop · MCP</p>
 
-## Deel B — Context7
+## Context7
 
 Een remote server, dus een ander soort configuratie:
 
 ```sh
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
 ```
-
-Werkt zonder account. Een gratis key op context7.com verhoogt je limiet.
 
 Note: Bewust een andere manier dan deel A: daar een projectbestand, hier de
 CLI. Beide moeten ze een keer gedaan hebben. `claude mcp list` om te checken.
