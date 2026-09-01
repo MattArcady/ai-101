@@ -15,13 +15,9 @@ neem de tijd voor het skelet.
 
 ## Wat we gaan doen
 
-Een skill die een ticket **opzoekt** en **nabouwt**:
+- Een skill maken die een ticket **opzoekt** en **nabouwt**
+- Een ticket oppakken met de skill
 
-1. zoekt in `tickets/` op nummer of omschrijving
-2. leest de acceptatiecriteria
-3. bouwt precies dat — niet meer
-4. schrijft een test per criterium
-5. verifieert en rapporteert
 
 Note: De kern van deze workshop is punt 3 en 5. Een agent bouwt graag méér
 dan gevraagd, en meldt graag "klaar" zonder iets gedraaid te hebben. De
@@ -34,12 +30,7 @@ opnieuw te vragen.
 
 ## De backlog
 
-```sh
-ls workshops/tourplanner/tickets/
-```
-
-Vijf tickets. Eén ervan is klaar om te bouwen, de rest niet:
-done, backlog, on hold, blocked.
+In `workshops/tourplanner/tickets/` staan vijf tickets. Eén ervan is klaar om te bouwen, de rest niet.
 
 **`TOUR-142` — Reisbudget met waarschuwing**
 
@@ -55,20 +46,17 @@ agent die alleen de titel leest, bouwt het alsnog.
 
 <p class="eyebrow">Workshop · Ticket</p>
 
-## Deel A — de skill
+## De skill
 
-`.claude/skills/ticket-bouwen/SKILL.md` — skelet met zeven TODO's.
+`.claude/skills/implement-ticket/SKILL.md` is een lege skill. Vul de skill in (of laat dit doen) met de volgende stappen:
 
-```markdown
----
-name: ticket-bouwen
-description: Zoek een ticket op in tickets/ en bouw het na,
-  inclusief tests en verificatie.
----
-```
-
-Vul in: zoeken, criteria als checklist, aannames, bouwen, testen,
-verifiëren, afrapporteren.
+1. zoekt in `tickets/` op nummer of omschrijving
+2. controleer de status
+3. leest de acceptatiecriteria
+4. geef een stappenplan aan de gebruiker
+5. bouwt precies dat en niet meer
+6. schrijft een test per criterium
+7. verifieert en rapporteert
 
 Note: Laat ze vooral nadenken over de randgevallen in TODO 1 en 2: meerdere
 matches, geen match, en een ticket dat niet klaar is om op te pakken.
